@@ -1,0 +1,11 @@
+platform :swift, :template => 'scripts/localio_template.erb', :file_name => 'general.strings'
+
+output_path 'Modules/Sources/AppCommon/Localizables'
+
+source :path => 'Localizables.xlsx',
+       :sheet => 2
+
+formatting :snake_case
+
+# If the app has [i] tags or something like that, uncomment this
+except :keys => '[\[][a][\]]'

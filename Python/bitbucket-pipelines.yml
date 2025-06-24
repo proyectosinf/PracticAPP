@@ -1,0 +1,57 @@
+image: atlassian/default-image:4
+
+definitions:
+  steps:
+    - step: &build-test
+        name: Build Docker image and Test
+        script:
+          - CONTEXT_PATH="./project"
+          - DOCKER_FILE="./project/Dockerfile"
+          - IMAGE_NAME=$BITBUCKET_REPO_SLUG
+
+          # Verify that the Dockerfile exists
+          - test -f ${DOCKER_FILE} || (echo "❌ Dockerfile no encontrado en ${DOCKER_FILE}" && exit 1)
+
+          # Build image
+          - docker build ${CONTEXT_PATH} --file ${DOCKER_FILE} --tag ${IMAGE_NAME}
+
+          # Verificar que la imagen fue creada
+          - echo "✅ IMAGE_NAME=${IMAGE_NAME}"
+          - docker image ls | grep ${IMAGE_NAME} || (echo "❌ Imagen no construida correctamente" && exit 1)
+
+          # Run container
+          - |
+            docker run -d --name api \
+              -e PORT=8765 \
+              -e ENVIRONMENT=pre \
+              -e API_VERSION=${API_VERSION} \
+              -e DATABASE_URL=${DATABASE_URL} \
+              -e SERVICE_ACCOUNT_CREDENTIALS="${SERVICE_ACCOUNT_CREDENTIALS}" \
+              -e FIREBASE_API_KEY="${FIREBASE_API_KEY}" \
+              ${IMAGE_NAME}
+
+          # Linter + testing
+          - docker exec api python -m pytest .
+          - docker exec api python -m flake8 .
+          - docker exec api python -m black . --check
+          - docker exec api python -m isort .
+
+          # Export image
+          - docker save ${IMAGE_NAME} --output "${IMAGE_NAME}.tar"
+
+        services:
+          - docker
+        caches:
+          - docker
+        artifacts:
+          - "*.tar"
+
+pipelines:
+  branches:
+    main:
+      - step: *build-test
+    development:
+      - step: *build-test
+  pull-requests:
+    '**':
+      - step: *build-test

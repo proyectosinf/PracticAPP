@@ -1,0 +1,17 @@
+package com.mobivery.fct25.app.common.designsystem.theme
+
+import androidx.compose.ui.unit.dp
+
+val HEIGHT_CIRCULAR_BUTTON = 28.dp
+val HEIGHT_ICON_BUTTON = 20.dp
+val HEIGHT_RADIUS_BUTTON = 24.dp
+val HEIGHT_ICON_BOTTOM_BAR =  50.dp
+val PROGRESS_BAR_SIZE = 36.dp
+val LOADING_DIALOG_RADIUS = 8.dp
+val DIALOG_RADIUS = 8.dp
+val DEFAULT_ELEVATION = 8.dp
+val DEFAULT_DIALOG_ELEVATION = 10.dp
+val EMPTY_PLACEHOLDER_MARGIN_TOP = 100.dp
+val RADIUS_FOR_SMALL_BUTTON = 40.dp
+val RADIUS_FOR_MEDIUM_BUTTON = 40.dp
+val RADIUS_FOR_BIG_BUTTON = 12.dp

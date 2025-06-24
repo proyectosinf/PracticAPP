@@ -1,0 +1,11 @@
+swiftlint.lint_files inline_mode: true
+
+xcode_summary.inline_mode = true
+
+xcov.report(
+   scheme: "PracticApp",
+   xccov_file_direct_path: "fastlane/test-reports/PracticApp.xcresult",
+   exclude_targets: "PracticApp.app, PracticAppModules, GULEnvironment, GULLogger, GULNSData, GULUserDefaults"
+)
+
+warn("😡 Big PR, you owe the reviewer a 🍺 🫶") if git.lines_of_code > 500

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!--
+        Backup user data:
+        https://developer.android.com/identity/data/autobackup
+        - "fullBackupContent": to control which files are backed up on devices running
+        Android 11 (API level 30) or lower.
+        - "dataExtractionRules": if your app targets Android 12 (API level 31) or higher,
+        follow the steps in this section to control which files are backed up.
+        - "encrypted_preferences" file is kept out of backup to prevent crashes (https://issuetracker.google.com/issues/176215143)
+     -->
+
+    <application
+        android:name="com.mobivery.fct25.base.BaseApplication"
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:icon="@drawable/practicapp"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/practicapp"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- TODO: remove this if not needed in your project (if won't access storage) -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name="com.mobivery.fct25.RootActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- TODO: custom your notification icon -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/logo_icon" />
+
+        <!-- TODO: custom your notification icon color -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/primary_color" />
+
+        <!-- TODO: remove this if not needed in your project (if no push notifications will be received) -->
+        <service
+            android:name=".notifications.NotificationsService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>

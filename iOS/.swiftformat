@@ -1,0 +1,14 @@
+--maxwidth 120
+--wraparguments before-first
+--ifdef no-indent
+--stripunusedargs closure-only
+--commas inline
+--header strip
+
+--exclude \
+    Modules/Sources/AppCommon/Localizables, \
+    DerivedData, \
+    scripts/xcode-templates
+
+--disable \
+    wrapMultilineStatementBraces

@@ -1,0 +1,407 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		109992182DD7F6D80095759F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 109992172DD7F6D80095759F /* Kingfisher */; };
+		A53B4D1E2BB1933600DFC081 /* PracticApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53B4D1D2BB1933600DFC081 /* PracticApp.swift */; };
+		A53B4D222BB1933700DFC081 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A53B4D212BB1933700DFC081 /* Assets.xcassets */; };
+		A53B4D252BB1933700DFC081 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A53B4D242BB1933700DFC081 /* Preview Assets.xcassets */; };
+		A53C725E2BE407900075E977 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A53C725A2BE407900075E977 /* InfoPlist.strings */; };
+		A53C725F2BE407900075E977 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A53C725C2BE407900075E977 /* InfoPlist.strings */; };
+		A58DD3A42BB9A59000E47265 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A58DD3A12BB9A59000E47265 /* GoogleService-Info.plist */; };
+		A58DD3A52BB9A59000E47265 /* GoogleServicePRE-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A58DD3A22BB9A59000E47265 /* GoogleServicePRE-Info.plist */; };
+		A5B3F9BA2BCD20A80033D925 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B3F9B92BCD20A80033D925 /* AppDelegate.swift */; };
+		A5B3F9BD2BCD20EE0033D925 /* Firebase+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B3F9BC2BCD20EE0033D925 /* Firebase+Extras.swift */; };
+		A5C3A1CC2BDFDC4500417312 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = A5C3A1CB2BDFDC4500417312 /* PrivacyInfo.xcprivacy */; };
+		A5FCBA752BB3EFD40084D740 /* PracticAppModules in Frameworks */ = {isa = PBXBuildFile; productRef = A5FCBA742BB3EFD40084D740 /* PracticAppModules */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A52F2FDC2BB76FDC001CC0C2 /* App.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = App.xcconfig; sourceTree = "<group>"; };
+		A52F2FDD2BB76FDC001CC0C2 /* AppAdhoc.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = AppAdhoc.xcconfig; sourceTree = "<group>"; };
+		A52F2FDE2BB76FDC001CC0C2 /* AppDebug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = AppDebug.xcconfig; sourceTree = "<group>"; };
+		A52F2FE42BB76FDC001CC0C2 /* Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
+		A52F2FE52BB76FDC001CC0C2 /* ProjectAdhoc.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ProjectAdhoc.xcconfig; sourceTree = "<group>"; };
+		A52F2FE62BB76FDC001CC0C2 /* ProjectDebug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ProjectDebug.xcconfig; sourceTree = "<group>"; };
+		A53B4D1A2BB1933600DFC081 /* PracticApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A53B4D1D2BB1933600DFC081 /* PracticApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticApp.swift; sourceTree = "<group>"; };
+		A53B4D212BB1933700DFC081 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A53B4D242BB1933700DFC081 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A53C72592BE407900075E977 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A53C725B2BE407900075E977 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A58DD3A12BB9A59000E47265 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A58DD3A22BB9A59000E47265 /* GoogleServicePRE-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleServicePRE-Info.plist"; sourceTree = "<group>"; };
+		A5B3F9B92BCD20A80033D925 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A5B3F9BC2BCD20EE0033D925 /* Firebase+Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+Extras.swift"; sourceTree = "<group>"; };
+		A5C3A1CB2BDFDC4500417312 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		A5C3A1CD2BDFE39C00417312 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5C3A1CE2BDFE94200417312 /* App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = App.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A53B4D172BB1933600DFC081 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				109992182DD7F6D80095759F /* Kingfisher in Frameworks */,
+				A5FCBA752BB3EFD40084D740 /* PracticAppModules in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A52F2FDF2BB76FDC001CC0C2 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A52F2FDC2BB76FDC001CC0C2 /* App.xcconfig */,
+				A52F2FDD2BB76FDC001CC0C2 /* AppAdhoc.xcconfig */,
+				A52F2FDE2BB76FDC001CC0C2 /* AppDebug.xcconfig */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A52F2FE72BB76FDC001CC0C2 /* ConfigFiles */ = {
+			isa = PBXGroup;
+			children = (
+				A52F2FDF2BB76FDC001CC0C2 /* App */,
+				A52F2FE42BB76FDC001CC0C2 /* Project.xcconfig */,
+				A52F2FE52BB76FDC001CC0C2 /* ProjectAdhoc.xcconfig */,
+				A52F2FE62BB76FDC001CC0C2 /* ProjectDebug.xcconfig */,
+			);
+			path = ConfigFiles;
+			sourceTree = "<group>";
+		};
+		A53B4D112BB1933600DFC081 = {
+			isa = PBXGroup;
+			children = (
+				A52F2FE72BB76FDC001CC0C2 /* ConfigFiles */,
+				A53B4D1C2BB1933600DFC081 /* App */,
+				A53B4D1B2BB1933600DFC081 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A53B4D1B2BB1933600DFC081 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A53B4D1A2BB1933600DFC081 /* PracticApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A53B4D1C2BB1933600DFC081 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A5B3F9BB2BCD20D40033D925 /* Firebase */,
+				A58DD3A32BB9A59000E47265 /* SupportingFiles */,
+				A53B4D1D2BB1933600DFC081 /* PracticApp.swift */,
+				A53B4D212BB1933700DFC081 /* Assets.xcassets */,
+				A53B4D232BB1933700DFC081 /* Preview Content */,
+				A5B3F9B92BCD20A80033D925 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A53B4D232BB1933700DFC081 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A53B4D242BB1933700DFC081 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A53C725D2BE407900075E977 /* InfoPlist */ = {
+			isa = PBXGroup;
+			children = (
+				A53C725A2BE407900075E977 /* InfoPlist.strings */,
+				A53C725C2BE407900075E977 /* InfoPlist.strings */,
+			);
+			path = InfoPlist;
+			sourceTree = "<group>";
+		};
+		A58DD3A32BB9A59000E47265 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				A53C725D2BE407900075E977 /* InfoPlist */,
+				A5C3A1CE2BDFE94200417312 /* App.entitlements */,
+				A5C3A1CD2BDFE39C00417312 /* Info.plist */,
+				A5C3A1CB2BDFDC4500417312 /* PrivacyInfo.xcprivacy */,
+				A58DD3A12BB9A59000E47265 /* GoogleService-Info.plist */,
+				A58DD3A22BB9A59000E47265 /* GoogleServicePRE-Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		A5B3F9BB2BCD20D40033D925 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				A5B3F9BC2BCD20EE0033D925 /* Firebase+Extras.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A53B4D192BB1933600DFC081 /* PracticApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A53B4D3E2BB1933700DFC081 /* Build configuration list for PBXNativeTarget "PracticApp" */;
+			buildPhases = (
+				A53B4D162BB1933600DFC081 /* Sources */,
+				A53B4D172BB1933600DFC081 /* Frameworks */,
+				A53B4D182BB1933600DFC081 /* Resources */,
+				E82F9CAD2D00815E00AF7D55 /* Swiftlint */,
+				A5859B9B2BC7168A00635AD0 /* Crashlytics */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PracticApp;
+			packageProductDependencies = (
+				A5FCBA742BB3EFD40084D740 /* PracticAppModules */,
+				109992172DD7F6D80095759F /* Kingfisher */,
+			);
+			productName = App;
+			productReference = A53B4D1A2BB1933600DFC081 /* PracticApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A53B4D122BB1933600DFC081 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					A53B4D192BB1933600DFC081 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = A53B4D152BB1933600DFC081 /* Build configuration list for PBXProject "App" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				es,
+			);
+			mainGroup = A53B4D112BB1933600DFC081;
+			packageReferences = (
+				A5FCBA732BB3EFD40084D740 /* XCLocalSwiftPackageReference "Modules" */,
+				109992162DD7F6D80095759F /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
+			productRefGroup = A53B4D1B2BB1933600DFC081 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A53B4D192BB1933600DFC081 /* PracticApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A53B4D182BB1933600DFC081 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A53B4D252BB1933700DFC081 /* Preview Assets.xcassets in Resources */,
+				A53C725F2BE407900075E977 /* InfoPlist.strings in Resources */,
+				A53C725E2BE407900075E977 /* InfoPlist.strings in Resources */,
+				A53B4D222BB1933700DFC081 /* Assets.xcassets in Resources */,
+				A58DD3A42BB9A59000E47265 /* GoogleService-Info.plist in Resources */,
+				A5C3A1CC2BDFDC4500417312 /* PrivacyInfo.xcprivacy in Resources */,
+				A58DD3A52BB9A59000E47265 /* GoogleServicePRE-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A5859B9B2BC7168A00635AD0 /* Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${PRODUCT_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist",
+				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/GoogleService-Info.plist",
+				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/GoogleServicePRE-Info.plist",
+				"$(TARGET_BUILD_DIR)/$(EXECUTABLE_PATH)",
+			);
+			name = Crashlytics;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"${CONFIGURATION}\" = \"Release\" ]; then\n  \"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\nelif [ \"${CONFIGURATION}\" = \"Adhoc\" ]; then\n  \"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\" -gsp \"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleServicePRE-Info.plist\"\nfi;\n";
+		};
+		E82F9CAD2D00815E00AF7D55 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]\nthen\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\nif command -v swiftlint >/dev/null 2>&1\nthen\n    swiftlint\nelse\n    echo \"warning: `swiftlint` command not found run $ brew bundle for installation.\"\n    exit -1\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A53B4D162BB1933600DFC081 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A53B4D1E2BB1933600DFC081 /* PracticApp.swift in Sources */,
+				A5B3F9BA2BCD20A80033D925 /* AppDelegate.swift in Sources */,
+				A5B3F9BD2BCD20EE0033D925 /* Firebase+Extras.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A53C725A2BE407900075E977 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A53C72592BE407900075E977 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A53C725C2BE407900075E977 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A53C725B2BE407900075E977 /* es */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A52F2FCF2BB76152001CC0C2 /* Adhoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A52F2FE52BB76FDC001CC0C2 /* ProjectAdhoc.xcconfig */;
+			buildSettings = {
+			};
+			name = Adhoc;
+		};
+		A52F2FD02BB76152001CC0C2 /* Adhoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A52F2FDD2BB76FDC001CC0C2 /* AppAdhoc.xcconfig */;
+			buildSettings = {
+			};
+			name = Adhoc;
+		};
+		A53B4D3C2BB1933700DFC081 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A52F2FE62BB76FDC001CC0C2 /* ProjectDebug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		A53B4D3D2BB1933700DFC081 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A52F2FE42BB76FDC001CC0C2 /* Project.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		A53B4D3F2BB1933700DFC081 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A52F2FDE2BB76FDC001CC0C2 /* AppDebug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		A53B4D402BB1933700DFC081 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A52F2FDC2BB76FDC001CC0C2 /* App.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A53B4D152BB1933600DFC081 /* Build configuration list for PBXProject "App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A53B4D3C2BB1933700DFC081 /* Debug */,
+				A53B4D3D2BB1933700DFC081 /* Release */,
+				A52F2FCF2BB76152001CC0C2 /* Adhoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A53B4D3E2BB1933700DFC081 /* Build configuration list for PBXNativeTarget "PracticApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A53B4D3F2BB1933700DFC081 /* Debug */,
+				A53B4D402BB1933700DFC081 /* Release */,
+				A52F2FD02BB76152001CC0C2 /* Adhoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		A5FCBA732BB3EFD40084D740 /* XCLocalSwiftPackageReference "Modules" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Modules;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		109992162DD7F6D80095759F /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.3.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		109992172DD7F6D80095759F /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 109992162DD7F6D80095759F /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		A5FCBA742BB3EFD40084D740 /* PracticAppModules */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PracticAppModules;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A53B4D122BB1933600DFC081 /* Project object */;
+}

@@ -1,0 +1,81 @@
+plugins {
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.hilt)
+    alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.kover)
+}
+
+android {
+    namespace 'com.mobivery.fct25.feature.about'
+
+    compileSdk libs.versions.compileSdk.get() as Integer
+
+    defaultConfig {
+        minSdk libs.versions.minSdk.get() as Integer
+        targetSdk libs.versions.targetSdk.get() as Integer
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.toVersion(libs.versions.jvm.get())
+        targetCompatibility JavaVersion.toVersion(libs.versions.jvm.get())
+    }
+    kotlinOptions {
+        jvmTarget = libs.versions.jvm.get()
+    }
+    buildFeatures {
+        buildConfig = true
+        compose true
+    }
+    flavorDimensions = ["product", "environment"]
+    productFlavors {
+        apply from: '../../build_variants.gradle', to: ext
+        ext.flavors.each { name, config ->
+            "$name" {
+                dimension config.dimension
+            }
+        }
+    }
+
+    // Fixes error when running tests ("duplicated 'META-INF' files")
+    packagingOptions { resources.excludes.add("META-INF/*") }
+
+    testOptions {
+        unitTests.all {
+            useJUnitPlatform()
+            test {
+                reports.junitXml.outputLocation.set(file("$rootDir/build/test-results/about"))
+            }
+        }
+    }
+}
+
+dependencies {
+
+    implementation project(path: ':app:common')
+    implementation project(path: ':data')
+
+    // Compose
+    implementation platform(libs.compose.bom)
+    implementation libs.bundles.compose
+
+    // AndroidX
+    implementation libs.androidx.material
+
+    // Dagger/Hilt
+    implementation libs.bundles.hilt
+    ksp libs.hilt.compiler
+
+    // Debug
+    debugImplementation(libs.test.composeManifest)
+    debugImplementation libs.compose.uiTooling
+
+    // Test
+    testImplementation project(path: ':testing')
+    testImplementation libs.bundles.test
+    androidTestImplementation platform(libs.compose.bom)
+    androidTestImplementation libs.test.mockk.android
+    androidTestImplementation libs.test.compose
+    screenshotTestImplementation(libs.compose.uiTooling)
+}

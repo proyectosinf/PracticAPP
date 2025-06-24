@@ -1,0 +1,10 @@
+ruby '2.7.2'
+
+source "https://rubygems.org"
+
+gem 'localio', git: 'https://bitbucket.org/mobivery-public/localio', tag: '2.0.2'
+gem 'danger'
+gem "danger-android_lint"
+gem 'ansi', '1.5.0' # required by danger
+gem 'danger-shroud' # coverage report
+gem 'faraday-retry' # Faraday message

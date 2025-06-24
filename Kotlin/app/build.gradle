@@ -1,0 +1,172 @@
+import com.github.triplet.gradle.androidpublisher.ReleaseStatus
+
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.kotlin.parcelize)
+    alias(libs.plugins.hilt)
+    alias(libs.plugins.googleServices)
+    alias(libs.plugins.crashlytics)
+    alias(libs.plugins.appDistribution)
+    alias(libs.plugins.play.publisher)
+    alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.kover)
+}
+
+apply from: "$rootDir/app/version.gradle"
+
+android {
+    defaultConfig {
+        compileSdk libs.versions.compileSdk.get() as Integer
+        minSdk libs.versions.minSdk.get() as Integer
+        targetSdk libs.versions.targetSdk.get() as Integer
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        /**
+         * These values (KEYSTORE_FILE, KEYSTORE_PASSWORD, KEY_ALIAS and KEY_PASSWORD) can be
+         * set by passing parameters (this is used when running the compilation from the
+         * release_build_script.sh script). In case no value is set for them (or when running
+         * the application from Android Studio) the default values stored in
+         * gradle.properties will be used. Production credentials should also be stored in a
+         * separate location, such as Basecamp.
+         */
+        keystoreConfig {
+            storeFile file(KEYSTORE_FILE)
+            storePassword KEYSTORE_PASSWORD
+            keyAlias KEY_ALIAS
+            keyPassword KEY_PASSWORD
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            signingConfig signingConfigs.keystoreConfig
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+        }
+        debug {
+            signingConfig signingConfigs.keystoreConfig
+            ext.enableCrashlytics = false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.toVersion(libs.versions.jvm.get())
+        targetCompatibility JavaVersion.toVersion(libs.versions.jvm.get())
+    }
+    kotlinOptions {
+        jvmTarget = libs.versions.jvm.get()
+    }
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+    buildFeatures {
+        buildConfig = true
+        compose true
+    }
+    flavorDimensions = ["product", "environment"]
+    productFlavors {
+        apply from: 'build_variants.gradle', to: ext
+        ext.flavors.each { name, config ->
+            "$name" {
+                dimension config.dimension
+                versionName versionNames[name]
+                versionCode versionCodes[name]
+                firebaseAppDistribution {
+                    groups = config.firebaseGroups
+                }
+                // ApplicationId
+                if (config.applicationId != null) {
+                    applicationId config.applicationId
+                }
+                if (config.applicationIdSuffix != null) {
+                    applicationIdSuffix config.applicationIdSuffix
+                }
+            }
+        }
+    }
+
+    // Fixes error when running tests ("duplicated 'META-INF' files")
+    packagingOptions { resources.excludes.add("META-INF/*") }
+
+    namespace 'com.mobivery.fct25'
+    lint {
+        xmlReport true
+    }
+}
+
+play {
+    track.set("internal")
+    releaseStatus.set(ReleaseStatus.COMPLETED)
+    // File google-play-api-key.json is created by release_build_script.sh
+    serviceAccountCredentials.set(file("../google-play-api-key.json"))
+}
+
+tasks.register('moveConnectedResults') {
+    // Expects 'flavor' parameter: -Pflavor=yourFlavor
+    // Expects 'module' parameter: -Pmodule=yourModule
+    copy {
+        from "$rootDir/build/test-results/$module/connected/debug/flavors/${flavor}Pre/"
+        into "$rootDir/build/test-results/$module"
+        include "*.xml"
+    }
+}
+
+dependencies {
+
+    implementation project(path: ":domain")
+    implementation project(path: ":data")
+    implementation project(path: ":app:common")
+    implementation project(path: ':app:feature:login')
+    implementation project(path: ':app:feature:home')
+    implementation project(path: ':app:feature:about')
+    implementation project(path: ':app:feature:components')
+    implementation project(path: ':app:feature:register')
+    implementation project(path: ':app:feature:worktutor')
+    implementation project(path: ':app:feature:company')
+    implementation project(path: ':app:feature:student')
+
+    implementation libs.kotlin.stdlib
+    implementation libs.kotlin.reflect
+
+    // Compose
+    implementation libs.compose.activity
+    implementation platform(libs.compose.bom)
+    implementation libs.bundles.compose
+
+    // Dagger/Hilt
+    implementation libs.bundles.hilt
+    ksp libs.hilt.compiler
+
+    // Firebase
+    implementation platform(libs.firebase.bom)
+    implementation libs.firebase.auth.ktx
+    implementation(libs.firebase.analytics) {
+        exclude group: 'com.google.android.gms', module: 'play-services-ads-identifier'
+    }
+    implementation(libs.firebase.messaging) {
+        exclude group: 'com.google.android.gms', module: 'play-services-ads-identifier'
+    }
+    implementation(libs.firebase.crashlytics) {
+        exclude group: 'com.google.android.gms', module: 'play-services-ads-identifier'
+    }
+
+    // Amplitude
+    implementation libs.tools.amplitude
+
+    // Timber
+    implementation libs.tools.timber
+
+    // In-app updates
+    implementation libs.play.app.update
+
+    // Debug
+    debugImplementation libs.compose.uiTooling
+
+    // Test
+    testImplementation libs.bundles.test
+    androidTestImplementation platform(libs.compose.bom)
+}

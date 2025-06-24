@@ -1,0 +1,13 @@
+<application>
+  <component name="ExportableFileTemplateSettings">
+    <default_templates>
+      <template name="ComposeMVVMStack_1_0_3.kt" file-name="${NAME}Screen" reformat="true" live-template-enabled="false">
+        <template name="ComposeMVVMStack_1_0_3.kt.child.0.kt" file-name="${NAME}ViewModel" reformat="true" live-template-enabled="false" />
+      </template>
+      <template name="ComposeNavigation.kt" file-name="${NAME}Navigation" reformat="true" live-template-enabled="false" />
+      <template name="ComposeNestedNavigation.kt" file-name="${NAME}NestedNavigation" reformat="true" live-template-enabled="false" />
+      <template name="ComposeScreenTests.kt" file-name="${NAME}ScreenTests" reformat="true" live-template-enabled="false" />
+      <template name="ComposeViewModelTests.kt" file-name="${NAME}ViewModelTests" reformat="true" live-template-enabled="false" />
+    </default_templates>
+  </component>
+</application>

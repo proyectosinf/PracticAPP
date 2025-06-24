@@ -1,0 +1,10 @@
+// Repos
+static def addRepos(RepositoryHandler handler) {
+    handler.google()
+    handler.mavenCentral()
+    handler.maven {
+        // Needed for Gradle Play Publisher
+        url 'https://oss.sonatype.org/content/repositories/snapshots'
+    }
+}
+ext.addRepos = this.&addRepos

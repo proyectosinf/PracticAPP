@@ -1,0 +1,22 @@
+/*
+GENERATED - DO NOT MODIFY - use localio instead.
+
+Created by localio
+*/
+
+import Foundation
+
+public extension Strings {
+    enum {{Table}} {}
+}
+
+public extension Strings.{{Table}} {<% @segments.each do |term| %>
+    static var <%= term.key.space_to_underscore.strip_tags.underscore %>: String { "<%= term.translation %>".localized }<%
+end %>
+}
+
+private extension String {
+    var localized: String {
+        NSLocalizedString(self, tableName: "{{Table}}", bundle: Bundle.module, value: "", comment: "")
+    }
+}

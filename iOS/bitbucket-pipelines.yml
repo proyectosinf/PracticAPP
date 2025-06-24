@@ -1,0 +1,159 @@
+definitions: 
+  steps:
+    - step: &build-test
+        name: Build and test
+        runs-on: 
+          - self.hosted
+          - macos
+          - xcode.16.3
+        script:
+          - bundle install
+          - bundle exec fastlane test
+          - bundle exec danger --verbose
+pipelines:
+  branches:
+    main:
+      - step: *build-test
+    development:
+      - step: *build-test
+  pull-requests:
+    '**':
+      - step: *build-test
+  custom:
+    release:
+      - variables:
+        - name: Version
+          description: "Número de versión en el App Store con el formato X.X.X"
+        - name: IncrementBuildNumber
+          description: "¿Incrementar el número de compilación?"
+          default: false
+          allowed-values:
+            - true
+            - false
+      - step:
+          name: Release version
+          runs-on:
+            - self.hosted
+            - macos
+            - xcode.16.3
+          script:
+            - bundle install
+            - eval "bundle exec fastlane release version:'${Version}' increment_build_number:${IncrementBuildNumber}"
+            - bundle exec fastlane release_candidate --env adhoc
+    qa-distribution:
+      - step:
+          name: Firebase beta distribution
+          runs-on: 
+            - self.hosted
+            - macos
+            - xcode.16.3
+          script:
+            - bundle install
+            - bundle exec fastlane qa_distribution --env adhoc
+    branch-qa-distribution:
+      - variables:
+        - name: Suffix
+          description: "Version suffix i.e: feature_x"
+      - step:
+          name: Firebase beta distribution
+          runs-on:
+            - self.hosted
+            - macos
+            - xcode.16.3
+          script:
+            - bundle install
+            - eval "bundle exec fastlane branch_qa_distribution --env adhoc version_suffix:'${Suffix}'"
+    scheduled-qa-distribution:
+      - step:
+          name: Scheduled Firebase beta distribution
+          runs-on: 
+            - self.hosted
+            - macos
+            - xcode.16.3
+          script:
+            - COMMIT_MESSAGE=`git log --format=%B -n 1 $BITBUCKET_COMMIT`
+            - if [[ "$COMMIT_MESSAGE" == *"[skip qa-distribution]"* ]]; then exit 0; fi
+            - bundle install
+            - bundle exec fastlane qa_distribution --env adhoc
+    localize:
+      - step:
+          runs-on:
+            - self.hosted
+            - macos
+          script:
+            - bundle install
+            - bundle exec rake localize
+            - git add -A
+            - git commit -m "Update localizables"
+            - git push origin $BITBUCKET_BRANCH
+    update-certs-and-provisionings:
+      - step:
+          runs-on:
+            - self.hosted
+            - macos
+            - xcode.16.3
+          script:
+            - bundle install
+            - bundle exec fastlane update_certs
+            - bundle exec fastlane update_certs --env adhoc
+            - bundle exec fastlane update_certs --env development
+    reset-certs-and-provisionings:
+      - variables:
+        - name: Confirm
+          description: "Esto va a borrar todos los provisioning profiles de la cuenta del cliente. ¿Estás seguro?"
+          default: false
+          allowed-values:
+            - true
+            - false
+      - step:
+          runs-on:
+            - self.hosted
+            - macos
+            - xcode.16.3
+          script:
+            - bundle install
+            - bundle exec fastlane reset_certs --env adhoc
+            - bundle exec fastlane reset_certs --env development
+    add-device:
+      - variables:
+        - name: DeviceName
+          description: "Nombre del dispositivo p.e.: MOBIVERY - Alvaro Murillo - iPhone 13 Pro Max"
+        - name: UDID
+          description: "UDID del dispositivo p.e.: 00008110-000848DA0286801E"
+      - step:
+          runs-on:
+            - self.hosted
+            - macos
+            - xcode.16.3
+          script:
+            - bundle install
+            - bundle exec fastlane add_device name:"${DeviceName}" udid:"${UDID}"
+    firebase-devices:
+      - step:
+          runs-on:
+              - self.hosted
+              - macos
+              - xcode.16.3
+          script:
+            - bundle install
+            - bundle exec fastlane firebase_udids
+          artifacts:
+            - ios_devices.txt
+    test-lanes:
+      - step:
+          runs-on:
+              - self.hosted
+              - macos
+              - xcode.16.3
+          script:
+            - bundle install
+            - bundle exec fastlane test_lanes
+    project-status:
+      - step:
+          runs-on:
+            - self.hosted
+            - macos
+            - xcode.16.3
+          script:
+            - git clone https://bitbucket.org/auroralabs/project-status-scripts.git
+            - eval "./project-status-scripts/ci_project_status_ios.sh $BITBUCKET_BRANCH"

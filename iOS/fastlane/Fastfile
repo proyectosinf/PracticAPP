@@ -1,0 +1,217 @@
+default_platform(:ios)
+
+platform :ios do
+
+  xcodes(select_for_current_build_only: true)
+
+  before_all do
+    ensure_bundle_exec
+  end
+
+  desc "Runs App and Modules tests"
+  lane :test do
+    scan
+  end
+
+  desc "Release version"
+  lane :release do |options|
+    version = options[:version]
+    check_release_branch(version)
+    app_store_session
+    install_certs
+    build_number = read_build_number
+    if options[:increment_build_number] == true
+      build_number = bump_build_number
+    end
+    set_version(version)
+    commit_version("Generated TestFlight version #{version}-#{build_number}")
+    gym
+    pilot(skip_waiting_for_build_processing: true)
+    add_git_tag(tag: "#{ENV['GIT_TAG_PREFIX']}#{version}-#{build_number}")
+    push_to_git_remote(
+      tags: true,
+      local_branch: "HEAD",
+      remote_branch: ENV['BITBUCKET_BRANCH']
+    )
+  end
+
+  desc "Publish beta in Firebase"
+  lane :qa_distribution do
+    app_store_session
+    match
+    version = read_version
+    build_number = bump_build_number
+    gym
+    firebase_app_distribution
+    commit_version("[skip qa-distribution] Generated Firebase App Distribution version #{version}-#{build_number}")
+    push_to_git_remote(
+      tags: false,
+      local_branch: "HEAD",
+      remote_branch: ENV['BITBUCKET_BRANCH']
+    )
+  end
+
+  desc "Publish beta in Firebase"
+  lane :branch_qa_distribution do |options|
+    version_suffix = options[:version_suffix]
+    unless !version_suffix.nil?
+      UI.user_error!("Version suffix must be provided")
+    end
+    app_store_session
+    match
+    version = "#{read_version}-#{version_suffix}"
+    set_version(version)
+    build_number = Time.now.strftime("%Y%m%d%H%M")
+    set_build_number(build_number)
+    gym
+    firebase_app_distribution
+  end
+
+  desc "Publish release candidate in Firebase"
+  lane :release_candidate do
+    app_store_session
+    match
+    set_version("#{read_version}-rc")
+    gym
+    firebase_app_distribution
+  end
+
+  desc "Register device"
+  lane :add_device do |options|
+    app_store_session
+    register_devices(
+      devices: { options[:name] => options[:udid] }
+    )
+  end
+
+  desc "Install certificates in your computer, this not generate new certs, just download them from the repository."
+  desc "to regenerate them use the lane update_certs"
+  desc "By default it install the release certs, for adhoc or development add the param --env [adhoc, development]"
+  lane :install_certs do
+    match
+  end
+
+  desc "Update certificates"
+  lane :update_certs do
+    app_store_session
+    match(readonly: false)
+  end
+
+  desc "Reset certificates"
+  lane :reset_certs do
+    app_store_session
+    match_nuke(type: ENV['MATCH_TYPE'], readonly: false, safe_remove_certs: true, skip_confirmation: true)
+    match(readonly: false)
+  end
+
+  desc "Update localizables"
+  lane :localize do
+    system("rake localize")
+  end
+
+  desc "Download Firebase UDIDs"
+  lane :firebase_udids do
+    firebase_app_distribution_get_udids
+    UI.header "Testers' devices 📱"
+    system ("echo \"$(<../#{ENV['FIREBASEAPPDISTRO_OUTPUT_FILE']})\"")
+  end
+
+  lane :test_lanes do
+    version = read_version
+    UI.message "Current app version #{version}"
+    UI.message "Current build number #{read_build_number}"
+    app_store_session
+    install_certs
+    test
+    gym
+    localize
+    ENV['BITBUCKET_BRANCH'] = "release/#{version}"
+    check_release_branch(version)
+  end
+
+  def app_store_session
+    return unless ENV['CI']
+    app_store_connect_api_key
+  end
+
+  def read_version
+    config_path = ENV['VERSIONING_CONFIG_FILE_PATH']
+    version = get_xcconfig_value(
+      path: config_path,
+      name: 'MARKETING_VERSION'
+    )
+    if version.nil?
+      UI.user_error!("Version not found in '#{config_path}'.")
+    else
+      version
+    end
+  end
+
+  def set_version(version)
+    update_xcconfig_value(
+      path: ENV['VERSIONING_CONFIG_FILE_PATH'],
+      name: 'MARKETING_VERSION',
+      value: version
+    )
+  end
+
+  def bump_build_number
+    build_number = read_build_number.to_i + 1
+    update_xcconfig_value(
+      path: ENV['VERSIONING_CONFIG_FILE_PATH'],
+      name: 'CURRENT_PROJECT_VERSION',
+      value: build_number.to_s
+    )
+    build_number
+  end
+
+  def read_build_number
+    config_path = ENV['VERSIONING_CONFIG_FILE_PATH']
+    build_number = get_xcconfig_value(
+      path: config_path,
+      name: 'CURRENT_PROJECT_VERSION'
+    )
+    if build_number.nil?
+      UI.user_error!("Build number not found in '#{config_path}'.")
+    else
+      build_number
+    end
+  end
+
+  def set_build_number(build_number)
+    config_path = ENV['VERSIONING_CONFIG_FILE_PATH']
+    update_xcconfig_value(
+      path: config_path,
+      name: 'CURRENT_PROJECT_VERSION',
+      value: build_number
+    )
+  end
+
+  def commit_version(message)
+    git_commit(path: "./#{ENV['VERSIONING_CONFIG_FILE_PATH']}", message: message)
+  end
+
+  def check_release_branch(version)
+    return unless ENV['CI']
+    branch = ENV['BITBUCKET_BRANCH']
+    branch_version = branch.split('/').last    
+    unless branch.start_with?("release/") || branch.start_with?("hotfix/")
+      UI.user_error!("The branch '#{branch}' does not meet the required format.")
+    end
+    if branch_version == version
+      UI.success("The branch name '#{branch}' is valid ✅")
+    else 
+      UI.user_error!("Branch name error: '#{branch}' must have the right version '#{version}'.")
+    end
+  end
+
+  error do |lane, exception|
+    return unless ENV['CI']
+    slack(
+      message: exception.to_s, 
+      success: false, 
+      payload: { "Output" => exception.error_info.to_s }
+    )
+  end
+
+end

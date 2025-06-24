@@ -1,0 +1,33 @@
+def get_lint_report_path
+  lintFlavor = ENV['LINT_FLAVOR']
+  "app/build/reports/lint-results-#{lintFlavor}.xml"
+end
+
+def get_kover_report_file_name
+  lintFlavor = ENV['LINT_FLAVOR']
+  lintFlavorWithCapitalLetter = lintFlavor[0].upcase + lintFlavor[1..-1]
+  "report#{lintFlavorWithCapitalLetter}.xml"
+end
+
+lint_report_path = get_lint_report_path
+kover_report_file_name = get_kover_report_file_name
+
+if File.exist?(lint_report_path)
+  android_lint.report_file = lint_report_path
+  android_lint.lint(inline_mode: true)
+#   android_lint.filtering = true # uncomment to lint only new/modified files
+#   android_lint.filtering_lines = true # uncomment to lint only new/modified lines
+else
+  warn("The lint result file was not found in #{lint_report_path}. Make sure the lint task runs correctly.")
+end
+
+warn("Big PR") if git.lines_of_code > 500
+
+# Report coverage of modified files
+# Builds will only warn instead of fail if below project thresholds
+# Update this with your project's modules
+shroud.reportKover moduleName: 'app', file: "app/build/reports/kover/#{kover_report_file_name}", totalProjectThreshold: 30, modifiedFileThreshold: 30, failIfUnderProjectThreshold: false, failIfUnderFileThreshold: false
+shroud.reportKover moduleName: 'data', file: "data/build/reports/kover/#{kover_report_file_name}", totalProjectThreshold: 30, modifiedFileThreshold: 30, failIfUnderProjectThreshold: false, failIfUnderFileThreshold: false
+shroud.reportKover moduleName: 'login', file: "app/feature/login/build/reports/kover/#{kover_report_file_name}", totalProjectThreshold: 30, modifiedFileThreshold: 30, failIfUnderProjectThreshold: false, failIfUnderFileThreshold: false
+shroud.reportKover moduleName: 'home', file: "app/feature/home/build/reports/kover/#{kover_report_file_name}", totalProjectThreshold: 30, modifiedFileThreshold: 30, failIfUnderProjectThreshold: false, failIfUnderFileThreshold: false
+shroud.reportKover moduleName: 'about', file: "app/feature/about/build/reports/kover/#{kover_report_file_name}", totalProjectThreshold: 30, modifiedFileThreshold: 30, failIfUnderProjectThreshold: false, failIfUnderFileThreshold: false

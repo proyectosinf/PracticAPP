@@ -1,0 +1,23 @@
+flavors = [
+        fct25   : [
+                applicationId                   : "com.mobivery.fct25",
+                firebaseGroups                  : "mobivery",
+                dimension                       : "product",
+        ],
+        pre : [
+                // ServiceAPI URL is defined in 'data' module
+                dimension                       : "environment",
+                applicationIdSuffix             : ".pre",
+                appName                         : "@string/common_app_name_pre_text",
+                // TODO: set PRE amplitude API key or remove it if amplitude is not finally used
+                amplitudeKey                    : "",
+                apiUrl                          : "https://fct25-backend.onrender.com/api/v1/"
+        ],
+        pro : [
+                dimension                       : "environment",
+                appName                         : "@string/common_app_name_text",
+                // TODO: set PRO amplitude API key or remove it if amplitude is not finally used
+                amplitudeKey                    : "",
+                apiUrl                          : "https://fct25-backend.onrender.com/api/v1/"
+        ]
+]

@@ -1,0 +1,94 @@
+definitions:
+  variables:
+    - variable: &flavor
+        name: Flavor
+        default: fct25
+        allowed-values:
+          - fct25
+          # Add future flavors here
+  steps:
+    - step: &build-test
+        name: Build and test
+        runs-on:
+          - self.hosted
+          - macos
+        script:
+          - eval "./ci_tests_script.sh fct25"
+          # Add future flavors here
+          - export LINT_FLAVOR="fct25PreRelease"
+          - bundle install
+          - bundle exec danger --verbose
+
+pipelines:
+  branches:
+    main:
+      - step: *build-test
+    development:
+      - step: *build-test
+  pull-requests:
+    '**':
+      - step: *build-test
+  custom:
+    qa-distribution:
+      - variables:
+          - *flavor
+      - step:
+          runs-on:
+            - self.hosted
+            - macos
+          script:
+            - eval "./ci_build_script.sh $Flavor $BITBUCKET_BRANCH"
+    release:
+      # Compile and upload to Play Store release version. Optionally a version name can be used.
+      # In addition, it increases the version number.
+      - variables:
+          - *flavor
+          - name: VersionName
+            description: "Version name in the format X.X.X. If empty, the existing version name in the project will be used."
+      - step:
+          runs-on:
+            - self.hosted
+            - macos
+          script:
+            - eval "./release_build_script.sh $Flavor $BITBUCKET_BRANCH $VersionName"
+    scheduled-qa-distribution:
+      - step:
+          runs-on:
+            - self.hosted
+            - macos
+          script:
+            - COMMIT_MESSAGE=`git log --format=%B -n 1 $BITBUCKET_COMMIT`
+            - if [[ "$COMMIT_MESSAGE" == *"[skip qa-distribution]"* ]]; then exit 0; fi
+            - eval "./ci_build_script.sh fct25 $BITBUCKET_BRANCH"
+            # Add future flavors here
+    localize:
+      - step:
+          runs-on:
+            - self.hosted
+            - macos
+          script:
+            - bundle install
+            - bundle exec rake localize
+            - git add -A
+            - git commit -m "Updated localizables"
+            - git push origin $BITBUCKET_BRANCH
+    tests:
+      - step: *build-test
+    compose-preview-screenshot-tests:
+      runs-on:
+        - self.hosted
+        - macos
+      script:
+        - ./gradlew app:feature:login:validateFct25PreDebugScreenshotTest
+        # Add other flavors/modules here
+      artifacts:
+        - app/feature/login/build/reports/screenshotTest/preview/debug/fct25Pre/**
+        # Add other flavors/modules here
+    project-status:
+      - step:
+          runs-on:
+            - self.hosted
+            - macos
+          script:
+            - eval git clone https://bitbucket.org/auroralabs/project-status-scripts.git
+            - eval "./project-status-scripts/ci_project_status_android.sh $BITBUCKET_BRANCH"

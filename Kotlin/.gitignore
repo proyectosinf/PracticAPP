@@ -1,0 +1,11 @@
+﻿.gradle
+app/build
+app/common/build
+app/feature/about/build
+app/feature/home/build
+app/feature/login/build
+data/build
+domain/build
+.idea/
+build
+local.properties

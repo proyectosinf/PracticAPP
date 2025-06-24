@@ -1,0 +1,333 @@
+{
+    "superior": {
+      "Actividades Físicas y Deportivas": [
+        "Técnico Superior en Acondicionamiento Físico",
+        "Técnico Superior en Enseñanza y Animación Sociodeportiva"
+      ],
+      "Administración y Gestión": [
+        "Técnico Superior en Administración y Finanzas",
+        "Técnico Superior en Asistencia a la Dirección"
+      ],
+      "Agraria": [
+        "Técnico Superior en Ganadería y Asistencia en Sanidad Animal",
+        "Técnico Superior en Gestión Forestal y del Medio Natural",
+        "Técnico Superior en Paisajismo y Medio Rural"
+      ],
+      "Artes Gráficas": [
+        "Técnico Superior en Diseño y Edición de Publicaciones Impresas y Multimedia",
+        "Técnico Superior en Diseño y Gestión de la Producción Gráfica"
+      ],
+      "Artes y Artesanías": [
+        "Técnico Superior Artista Fallero y Construcción de Escenografías"
+      ],
+      "Comercio y Marketing": [
+        "Técnico Superior en Comercio Internacional",
+        "Técnico Superior en Gestión de Ventas y Espacios Comerciales",
+        "Técnico Superior en Marketing y Publicidad",
+        "Técnico Superior en Transporte y Logística"
+      ],
+      "Edificación y Obra Civil": [
+        "Técnico Superior en Organización y Control de Obras de Construcción",
+        "Técnico Superior en Proyectos de Edificación",
+        "Técnico Superior en Proyectos de Obra Civil"
+      ],
+      "Electricidad y Electrónica": [
+        "Técnico Superior en Automatización y Robótica Industrial",
+        "Técnico Superior en Electromedicina Clínica",
+        "Técnico Superior en Mantenimiento Electrónico",
+        "Técnico Superior en Sistemas Electrotécnicos y Automatizados",
+        "Técnico Superior en Sistemas de Telecomunicaciones e Informáticos"
+      ],
+      "Energía y Agua": [
+        "Técnico Superior en Centrales Eléctricas",
+        "Técnico Superior en Eficiencia Energética y Energía Solar Térmica",
+        "Técnico Superior en Energías Renovables",
+        "Técnico Superior en Gestión del Agua"
+      ],
+      "Fabricación Mecánica": [
+        "Técnico Superior en Construcciones Metálicas",
+        "Técnico Superior en Diseño en Fabricación Mecánica",
+        "Técnico Superior en Programación de la Producción en Fabricación Mecánica",
+        "Técnico Superior en Programación de la Producción en Moldeo de Metales y Polímeros",
+        "Técnico Superior en Óptica de Anteojería"
+      ],
+      "Hostelería y Turismo": [
+        "Técnico Superior en Agencias de Viajes y Gestión de Eventos",
+        "Técnico Superior en Dirección de Cocina",
+        "Técnico Superior en Dirección de Servicios de Restauración",
+        "Técnico Superior en Gestión de Alojamientos Turísticos",
+        "Técnico Superior en Guía, Información y Asistencias Turísticas"
+      ],
+      "Imagen Personal": [
+        "Técnico Superior en Asesoría de Imagen Personal y Corporativa",
+        "Técnico Superior en Caracterización y Maquillaje Profesional",
+        "Técnico Superior en Estilismo y Dirección de Peluquería",
+        "Técnico Superior en Estética Integral y Bienestar",
+        "Técnico Superior en Termalismo y Bienestar"
+      ],
+      "Imagen y Sonido": [
+        "Técnico Superior en Animaciones 3D, Juegos y Entornos Interactivos",
+        "Técnico Superior en Iluminación, Captación y Tratamiento de Imagen",
+        "Técnico Superior en Producción de Audiovisuales y Espectáculos",
+        "Técnico Superior en Realización de Proyectos Audiovisuales y Espectáculos",
+        "Técnico Superior en Sonido para Audiovisuales y Espectáculos"
+      ],
+      "Industrias Alimentarias": [
+        "Técnico Superior en Procesos y Calidad en la Industria Alimentaria",
+        "Técnico Superior en Vitivinicultura"
+      ],
+      "Informática y Comunicaciones": [
+        "Técnico Superior en Administración de Sistemas Informáticos en Red",
+        "Técnico Superior en Desarrollo de Aplicaciones Multiplataforma",
+        "Técnico Superior en Desarrollo de Aplicaciones Web"
+      ],
+      "Instalación y Mantenimiento": [
+        "Técnico Superior en Desarrollo de Proyectos de Instalaciones Térmicas y de Fluidos",
+        "Técnico Superior en Mantenimiento de Instalaciones Térmicas y de Fluidos",
+        "Técnico Superior en Mecatrónica Industrial"
+      ],
+      "Mantenimiento y Servicios a la Producción": [
+        "Técnico Superior en Prevención de Riesgos Profesionales (Título LOGSE)"
+      ],
+      "Madera, Mueble y Corcho": [
+        "Técnico Superior en Diseño y Amueblamiento"
+      ],
+      "Marítimo-Pesquera": [
+        "Técnico Superior en Acuicultura",
+        "Técnico Superior en Organización del Mantenimiento de Maquinaria de Buques y Embarcaciones",
+        "Técnico Superior en Transporte Marítimo y Pesca de Altura"
+      ],
+      "Química": [
+        "Técnico Superior en Fabricación de Productos Farmacéuticos, Biotecnológicos y Afines",
+        "Técnico Superior en Laboratorio de Análisis y de Control de Calidad",
+        "Técnico Superior en Química Industrial"
+      ],
+      "Sanidad": [
+        "Técnico Superior en Anatomía Patológica y Citodiagnóstico",
+        "Técnico Superior en Audiología Protésica",
+        "Técnico Superior en Documentación y Administración Sanitarias",
+        "Técnico Superior en Higiene Bucodental",
+        "Técnico Superior en Imagen para el Diagnóstico y Medicina Nuclear",
+        "Técnico Superior en Laboratorio Clínico y Biomédico",
+        "Técnico Superior en Ortoprótesis y Productos de Apoyo",
+        "Técnico Superior en Prótesis Dentales",
+        "Técnico Superior en Radioterapia y Dosimetría",
+        "Técnico Superior en Dietética"
+      ],
+      "Seguridad y Medio Ambiente": [
+        "Técnico Superior en Coordinación de Emergencias y Protección Civil",
+        "Técnico Superior en Educación y Control Ambiental",
+        "Técnico Superior en Prevención de Riesgos Profesionales",
+        "Técnico Superior en Química y Salud Ambiental"
+      ],
+      "Servicios Socioculturales y a la Comunidad": [
+        "Técnico Superior en Animación Sociocultural y Turística",
+        "Técnico Superior en Educación Infantil",
+        "Técnico Superior en Formación para la Movilidad Segura y Sostenible",
+        "Técnico Superior en Integración Social",
+        "Técnico Superior en Mediación Comunicativa",
+        "Técnico Superior en Promoción de Igualdad de Género"
+      ],
+      "Textil, Confección y Piel": [
+        "Técnico Superior en Diseño Técnico en Textil y Piel",
+        "Técnico Superior en Diseño y Producción de Calzado y Complementos",
+        "Técnico Superior en Patronaje y Moda",
+        "Técnico Superior en Vestuario a Medida y de Espectáculos"
+      ],
+      "Transporte y Mantenimiento de Vehículos": [
+        "Técnico Superior en Automoción",
+        "Técnico Superior en Mantenimiento Aeromecánico de Aviones con Motor de Pistón",
+        "Técnico Superior en Mantenimiento Aeromecánico de Aviones con Motor de Turbina",
+        "Técnico Superior en Mantenimiento Aeromecánico de Helicópteros con Motor de Pistón",
+        "Técnico Superior en Mantenimiento Aeromecánico de Helicópteros con Motor de Turbina",
+        "Técnico Superior en Mantenimiento de Sistemas Electrónicos y Aviónicos de Aeronaves"
+      ],
+      "Vidrio y Cerámica": [
+        "Técnico Superior en Desarrollo y Fabricación de Productos Cerámicos"
+      ]
+    },
+    "medio": {
+      "Actividades Físicas y Deportivas": [
+        "Técnico en Actividades Ecuestres",
+        "Técnico en Guía en el Medio Natural y de Tiempo Libre"
+      ],
+      "Administración y Gestión": [
+        "Técnico en Gestión Administrativa"
+      ],
+      "Agraria": [
+        "Técnico en Aprovechamiento y Conservación del Medio Natural",
+        "Técnico en Jardinería y Floristería",
+        "Técnico en Producción Agroecológica",
+        "Técnico en Producción Agropecuaria"
+      ],
+      "Artes Gráficas": [
+        "Técnico en Impresión Gráfica",
+        "Técnico en Postimpresión y Acabados Gráficos",
+        "Técnico en Preimpresión Digital"
+      ],
+      "Comercio y Marketing": [
+        "Técnico en Actividades Comerciales",
+        "Técnico en Comercialización de Productos Alimentarios"
+      ],
+      "Edificación y Obra Civil": [
+        "Técnico en Construcción",
+        "Técnico en Obras de Interior, Decoración y Rehabilitación"
+      ],
+      "Electricidad y Electrónica": [
+        "Técnico en Instalaciones Eléctricas y Automáticas",
+        "Técnico en Instalaciones de Telecomunicaciones"
+      ],
+      "Energía y Agua": [
+        "Técnico en Redes y Estaciones de Tratamiento de Aguas"
+      ],
+      "Fabricación Mecánica": [
+        "Técnico en Conformado por Moldeo de Metales y Polímeros",
+        "Técnico en Mecanizado",
+        "Técnico en Montaje de Estructuras e Instalación de Sistemas Aeronáuticos",
+        "Técnico en Soldadura y Calderería",
+        "Técnico en Joyería"
+      ],
+      "Hostelería y Turismo": [
+        "Técnico en Cocina y Gastronomía",
+        "Técnico en Servicios en Restauración"
+      ],
+      "Imagen Personal": [
+        "Técnico en Estética y Belleza",
+        "Técnico en Peluquería y Cosmética Capilar"
+      ],
+      "Imagen y Sonido": [
+        "Técnico en Vídeo Disc-Jockey y Sonido"
+      ],
+      "Industrias Alimentarias": [
+        "Técnico en Aceites de Oliva y Vinos",
+        "Técnico en Elaboración de Productos Alimenticios",
+        "Técnico en Panadería, Repostería y Confitería"
+      ],
+      "Industrias Extractivas": [
+        "Técnico en Excavaciones y Sondeos",
+        "Técnico en Piedra Natural"
+      ],
+      "Informática y Comunicaciones": [
+        "Técnico en Sistemas Microinformáticos y Redes"
+      ],
+      "Instalación y Mantenimiento": [
+        "Técnico en Instalaciones Frigoríficas y de Climatización",
+        "Técnico en Instalaciones de Producción de Calor",
+        "Técnico en Mantenimiento Electromecánico"
+      ],
+      "Madera, Mueble y Corcho": [
+        "Técnico en Carpintería y Mueble",
+        "Técnico en Instalación y Amueblamiento",
+        "Técnico en Procesado y Transformación de la Madera"
+      ],
+      "Marítimo-Pesquera": [
+        "Técnico en Cultivos Acuícolas",
+        "Técnico en Mantenimiento y Control de la Maquinaria de Buques y Embarcaciones",
+        "Técnico en Navegación y Pesca de Litoral",
+        "Técnico en Operaciones Subacuáticas e Hiperbáricas"
+      ],
+      "Química": [
+        "Técnico en Operaciones de Laboratorio",
+        "Técnico en Planta Química"
+      ],
+      "Sanidad": [
+        "Técnico en Emergencias Sanitarias",
+        "Técnico en Farmacia y Parafarmacia",
+        "Técnico en Cuidados Auxiliares de Enfermería"
+      ],
+      "Seguridad y Medio Ambiente": [
+        "Técnico en Emergencias y Protección Civil",
+        "Técnico en Sanidad Ambiental Aplicada",
+        "Técnico en Seguridad"
+      ],
+      "Servicios Socioculturales y a la Comunidad": [
+        "Técnico en Atención a Personas en Situación de Dependencia"
+      ],
+      "Textil, Confección y Piel": [
+        "Técnico en Calzado y Complementos de Moda",
+        "Técnico en Confección y Moda",
+        "Técnico en Fabricación y Ennoblecimiento de Productos Textiles"
+      ],
+      "Transporte y Mantenimiento de Vehículos": [
+        "Técnico en Carrocería",
+        "Técnico en Conducción de Vehículos de Transporte por Carretera",
+        "Técnico en Electromecánica de Maquinaria",
+        "Técnico en Electromecánica de Vehículos Automóviles",
+        "Técnico en Mantenimiento de Embarcaciones de Recreo",
+        "Técnico en Mantenimiento de Estructuras de Madera y Mobiliario de Embarcaciones de Recreo",
+        "Técnico en Mantenimiento de Material Rodante Ferroviario"
+      ],
+      "Vidrio y Cerámica": [
+        "Técnico en Fabricación de Productos Cerámicos"
+      ]
+    },
+    "basico": {
+      "Actividades Físicas y Deportivas": [
+        "Título Profesional Básico en Acceso y Conservación en Instalaciones Deportivas"
+      ],
+      "Administración y Gestión": [
+        "Título Profesional Básico en Informática de Oficina",
+        "Título Profesional Básico en Servicios Administrativos"
+      ],
+      "Agraria": [
+        "Título Profesional Básico en Actividades Agropecuarias",
+        "Título Profesional Básico en Agro-jardinería y Composiciones Florales",
+        "Título Profesional Básico en Aprovechamientos Forestales"
+      ],
+      "Artes Gráficas": [
+        "Título Profesional Básico en Artes Gráficas"
+      ],
+      "Comercio y Marketing": [
+        "Título Profesional Básico en Servicios Comerciales"
+      ],
+      "Edificación y Obra Civil": [
+        "Título Profesional Básico en Reforma y Mantenimiento de Edificios"
+      ],
+      "Electricidad y Electrónica": [
+        "Título Profesional Básico en Electricidad y Electrónica",
+        "Título Profesional Básico en Fabricación de Elementos Metálicos",
+        "Título Profesional Básico en Instalaciones Electrotécnicas y Mecánica"
+      ],
+      "Fabricación Mecánica": [
+        "Título Profesional Básico en Fabricación y Montaje"
+      ],
+      "Hostelería y Turismo": [
+        "Título Profesional Básico en Actividades de Panadería y Pastelería",
+        "Título Profesional Básico en Alojamiento y Lavandería",
+        "Título Profesional Básico en Cocina y Restauración"
+      ],
+      "Imagen Personal": [
+        "Título Profesional Básico en Peluquería y Estética"
+      ],
+      "Industrias Alimentarias": [
+        "Título Profesional Básico en Industrias Alimentarias"
+      ],
+      "Informática y Comunicaciones": [
+        "Título Profesional Básico en Informática y Comunicaciones"
+      ],
+      "Instalación y Mantenimiento": [
+        "Título Profesional Básico en Mantenimiento de Viviendas"
+      ],
+      "Madera, Mueble y Corcho": [
+        "Título Profesional Básico en Carpintería y Mueble"
+      ],
+      "Marítimo-Pesquera": [
+        "Título Profesional Básico en Actividades Marítimo-Pesqueras",
+        "Título Profesional Básico en Mantenimiento de Embarcaciones Deportivas y de Recreo"
+      ],
+      "Servicios Socioculturales y a la Comunidad": [
+        "Título Profesional Básico en Actividades Domésticas y Limpieza de Edificios"
+      ],
+      "Textil, Confección y Piel": [
+        "Título Profesional Básico en Arreglo y Reparación de Artículos Textiles y de Piel",
+        "Título Profesional Básico en Tapicería y Cortinaje"
+      ],
+      "Transporte y Mantenimiento de Vehículos": [
+        "Título Profesional Básico en Mantenimiento de Vehículos"
+      ],
+      "Vidrio y Cerámica": [
+        "Título Profesional Básico en Vidriería y Alfarería"
+      ]
+    }
+  }
+  

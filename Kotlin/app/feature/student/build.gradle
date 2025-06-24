@@ -1,0 +1,88 @@
+plugins {
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.hilt)
+    alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.kover)
+}
+
+android {
+    namespace 'com.mobivery.fct25.feature.student'
+
+    compileSdk libs.versions.compileSdk.get() as Integer
+
+    defaultConfig {
+        minSdk libs.versions.minSdk.get() as Integer
+        targetSdk libs.versions.targetSdk.get() as Integer
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.toVersion(libs.versions.jvm.get())
+        targetCompatibility JavaVersion.toVersion(libs.versions.jvm.get())
+    }
+
+    kotlinOptions {
+        jvmTarget = libs.versions.jvm.get()
+    }
+
+    buildFeatures {
+        buildConfig = true
+        compose = true
+    }
+
+    flavorDimensions = ["product", "environment"]
+    productFlavors {
+        apply from: '../../build_variants.gradle', to: ext
+        ext.flavors.each { name, config ->
+            "$name" {
+                dimension config.dimension
+            }
+        }
+    }
+
+    packagingOptions {
+        resources.excludes.add("META-INF/*")
+    }
+
+    testOptions {
+        unitTests.all {
+            useJUnitPlatform()
+            it.testLogging {
+                events("passed", "skipped", "failed")
+            }
+        }
+    }
+
+    sourceSets {
+        test {
+            java.srcDirs += "src/test/unitTest/java"
+        }
+    }
+}
+
+dependencies {
+    implementation project(":app:common")
+    implementation project(":domain")
+    implementation project(":data")
+
+    implementation platform(libs.compose.bom)
+    implementation libs.bundles.compose
+
+    implementation libs.androidx.material
+    implementation libs.bundles.hilt
+    ksp libs.hilt.compiler
+
+    implementation(libs.io.coil.compose)
+
+    debugImplementation libs.compose.uiTooling
+    debugImplementation libs.test.composeManifest
+
+    testImplementation project(":testing")
+    testImplementation libs.bundles.test
+    androidTestImplementation platform(libs.compose.bom)
+    androidTestImplementation libs.test.mockk.android
+    androidTestImplementation libs.test.compose
+    implementation libs.kotlin.test
+}

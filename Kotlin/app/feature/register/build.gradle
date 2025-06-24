@@ -1,0 +1,105 @@
+plugins {
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.hilt)
+    alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.kover)
+}
+
+android {
+    namespace 'com.mobivery.fct25.feature.register'
+
+    compileSdk libs.versions.compileSdk.get() as Integer
+
+    defaultConfig {
+        minSdk libs.versions.minSdk.get() as Integer
+        targetSdk libs.versions.targetSdk.get() as Integer
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.toVersion(libs.versions.jvm.get())
+        targetCompatibility JavaVersion.toVersion(libs.versions.jvm.get())
+    }
+
+    kotlinOptions {
+        jvmTarget = libs.versions.jvm.get()
+    }
+
+    buildFeatures {
+        buildConfig = true
+        compose true
+    }
+
+    flavorDimensions = ["product", "environment"]
+    productFlavors {
+        apply from: '../../build_variants.gradle', to: ext
+        ext.flavors.each { name, config ->
+            "$name" {
+                dimension config.dimension
+            }
+        }
+    }
+
+    packagingOptions {
+        resources.excludes.add("META-INF/*")
+    }
+
+    testOptions {
+        unitTests.all {
+            useJUnitPlatform()
+            it.testLogging {
+                events("passed", "skipped", "failed")
+            }
+        }
+    }
+
+    sourceSets {
+        test {
+            java.srcDirs += 'src/test/unitTest/java'
+        }
+    }
+}
+
+dependencies {
+    implementation project(path: ':app:common')
+    implementation project(path: ':domain')
+    implementation project(path: ':data')
+
+    // Firebase
+    implementation platform(libs.firebase.bom)
+    implementation libs.firebase.auth.ktx
+    implementation libs.kotlinx.coroutines.play.services
+
+    // Compose
+    implementation platform(libs.compose.bom)
+    implementation libs.bundles.compose
+
+    // AndroidX
+    implementation libs.androidx.material
+
+    // Dagger/Hilt
+    implementation libs.bundles.hilt
+    ksp libs.hilt.compiler
+
+    // Hilt test (unit tests)
+    testImplementation libs.hilt.core
+    kspTest libs.hilt.compiler
+
+    // Hilt test (instrumentation)
+    androidTestImplementation libs.hilt.core
+    kspAndroidTest libs.hilt.compiler
+
+    // Debug
+    debugImplementation(libs.test.composeManifest)
+    debugImplementation libs.compose.uiTooling
+
+    // Test
+    testImplementation project(path: ':testing')
+    testImplementation libs.bundles.test
+    androidTestImplementation platform(libs.compose.bom)
+    androidTestImplementation libs.test.mockk.android
+    androidTestImplementation libs.test.compose
+    implementation libs.kotlin.test
+}

@@ -1,0 +1,344 @@
+/*
+Localizable.strings
+
+GENERATED - DO NOT MODIFY - use the localio gem instead.
+
+Created by localio.
+*/
+
+
+
+// Common
+
+"common_app_name_text" = "Practicapp";
+"common_app_name_pre_text" = "Practicapp.pre";
+"common_language_code" = "en";
+"common_cancel_text" = "Cancel";
+"common_close_text" = "Close";
+"common_accept_text" = "Accept";
+"common_done_text" = "Done";
+"common_back_text" = "Back";
+"common_continue_text" = "Continue";
+"common_save_text" = "Save";
+"common_edit_text" = "Edit";
+"common_yes_text" = "Yes";
+"common_no_text" = "No";
+"common_error_text" = "Error";
+"common_default_server_error_text" = "An error occurred. Please try again.";
+"common_forgot_password_success_title_text" = "Sent mail";
+"common_forgot_password_success_message_text" = "We've sent an email to %@ with instructions on how to reset your password. If you don't receive it within a few minutes, please check your spam folder.";
+"common_loading_text" = "Loading...";
+"common_mandatory_text" = "Mandatory";
+"common_show_password_a11y" = "Show password";
+"common_hide_password_a11y" = "Hide password";
+"common_force_to_update_text" = "There is a new version available. Update to have the best possible experience.";
+"common_optional_update_text" = "There is a new version available. We recommend updating to have the best possible experience.";
+"common_update_app_text" = "Update app";
+"common_update_button" = "Update";
+"common_open_app_settings_text" = "Settings";
+"common_mandatory_placeholder_text" = "(Mandatory)";
+"common_menu_job_offers_label_text" = "Job offers";
+"common_menu_company_label_text" = "Company";
+"common_menu_candidacies_label_text" = "My candidacies";
+"common_unauthorized_error_text" = "Your session has expired. Please log in again.";
+
+// Login
+
+"login_title_text" = "Login";
+"login_email_text" = "Email";
+"login_password_text" = "Password";
+"login_send_button" = "Login";
+"login_welcome_title_text" = "PracticApp";
+"login_welcome_body_text" = "Your practices App";
+"login_forgot_password_button" = "Forgot password?";
+"login_sign_up_text" = "Don’t you have an account yet?";
+"login_sign_up_button" = "Sign up";
+"login_error_credentials_text" = "Invalid email or password";
+"login_forgot_password_title_text" = "Forgot your password?";
+"login_password_subtitle_text" = "Enter your email address and we'll send you a link to reset it.";
+"login_password_send_text" = "Send link";
+"login_password_nav_title_text" = " Recovered password";
+"login_try_later_text" = "We couldn't log you in. Please try again later.";
+
+// Logout
+
+"logout_confirmation_title_text" = "Logout";
+"logout_confirmation_message_text" = "Are you sure you want to log out?";
+"logout_confirm_button" = "Logout";
+"logout_cancel_button" = "Cancel";
+
+// Register
+
+"register_title_text" = "Register";
+"register_email_label_text" = "Email";
+"register_password_label_text" = "Password";
+"register_confirm_password_label_text" = "Repeat password";
+"register_name_label_text" = "Name";
+"register_lastname_label_text" = "Last name";
+"register_role_label_text" = "Role";
+"register_role_student_text" = "Student";
+"register_role_tutor_text" = "Work tutor";
+"register_security_code_label_text" = "Security code";
+"register_dni_label_text" = "DNI";
+"register_social_security_label_text" = "Social Security Number";
+"register_upload_pdf_button_button" = "Upload PDF";
+"register_contact_name_label_text" = "Contact name";
+"register_contact_phone_label_text" = "Contact phone";
+"register_send_button_button" = "Register";
+"register_invalid_email_text" = "Invalid email";
+"register_invalid_password_text" = "Password must be at least 8 characters, uppercase, lowercase and special characters";
+"register_passwords_not_match_text" = "Passwords do not match";
+"register_invalid_dni_text" = "Invalid DNI";
+"register_invalid_social_security_text" = "Invalid Social Security Number";
+"register_security_code_required_text" = "Security code is required";
+"register_name_required_text" = "Name is required";
+"register_lastname_required_text" = "Last name is required";
+"register_contact_email_label_text" = "Contact Email";
+"register_role_required_text" = "Role is required";
+"register_statement_text" = "¡Welcome to PracticApp!";
+"register_sub_statement_text" = "Sign up to start searching for internships";
+"register_error_email_exists_text" = "The email address is already registered";
+"register_max_length_name_surname_text" = "Maximum 100 characters allowed.";
+"register_invalid_phone_text" = "The phone number must have 9 characters";
+"register_register_success_1_text" = "Successful registration";
+"register_register_success_2_text" = "You have successfully registered.";
+"register_validation_error_text" = "Validation Error";
+"register_fields_completed_text" = "Please fill in all fields correctly.";
+"register_register_try_again_text" = "Registration could not be completed. Please try again.";
+"register_error_firebase_user_null_text" = "Could not get Firebase user";
+"register_error_firebase_token_text" = "Could not get Firebase token";
+"register_error_by_role_null_text" = "Unknow role";
+"register_error_dni_already_exists_text" = "A student already exists with that DNI";
+"register_error_role_null_text" = "You must select a role";
+
+// Home
+
+"home_title_text" = "Homes";
+"home_attach_photo_button" = "Attach photo";
+"home_attach_photo_dialog_button" = "Attach photo (with permission dialog)";
+"home_camera_rationale" = "A camera permit is required to take pictures.";
+"home_camera_rejected_permission" = "You must give camera permission to the app in order to attach photos.";
+"home_logout_button" = "Logout";
+
+// About
+
+"about_title_text" = "About";
+"about_button" = "Start resource that needs multiple permissions";
+"about_multiple_permissions_rationale" = "Camera and microphone permissions are required for X.";
+"about_multiple_permissions_rejected" = "You must allow camera and microphone permissions for the app to X.";
+
+// Company
+
+"candidacy_loading_text" = "Loading candidacies...";
+"candidacy_not_candidacy_text" = "Not candidacies";
+"candidacy_not_candidacy_info_text" = "This offer has no registered candidates.";
+"candidacy_postulation_text" = "Inscription date:";
+"candidacy_status_text" = "Status:";
+"candidacy_title_text" = "Candidacies";
+"candidacy_my_tittle_text" = "My candidacies";
+"candidacy_status_pending_text" = "Pending";
+"candidacy_status_accepted_text" = "Accepted";
+"candidacy_status_rejected_text" = "Rejected";
+"candidacy_list_previous_button" = "Previous";
+"candidacy_presentation_card_text" = "Presentation card:";
+"candidacy_register_text" = "Sing up";
+"candidacy_success_text" = "Success";
+"candidacy_singup_success_text" = "Registration completed successfully.";
+"candidacy_register_error_text" = "The registration could not be completed.";
+"candidacy_type_presentation_card_text" = "Type here...";
+"candidacy_list_next_button" = "Next";
+"candidacy_title_detail_text" = "Candidacy detail";
+"candidacy_additional_note_hint_text" = "Additional note (optional)";
+"candidacy_additional_note_text" = "Additional note";
+"candidacy_accept_button" = "Accept";
+"candidacy_reject_button" = "Reject";
+"candidacy_dialog_accept_title_text" = "Accept candidacy?";
+"candidacy_dialog_reject_title_text" = "Reject candidacy?";
+"candidacy_dialog_accept_confirm_button" = "Accept";
+"candidacy_dialog_reject_confirm_button" = "Reject";
+"candidacy_dialog_confirm_button" = "Confirm";
+"candidacy_dialog_cancel_button" = "Cancel";
+"candidacy_company_comment_text" = "Company comment";
+"candidacy_update_candidacy_text" = "Updated Candidacy";
+"candidacy_reject_candidacy_alert_text" = "You have successfully rejected the student";
+"candidacy_acept_candidacy_alert_text" = "You have successfully accepted the student";
+"candidacy_confirm_register_text" = "Confirm register";
+"candidacy_question_text" = "Want";
+"candidacy_question_to_text" = "to";
+"candidacy_register_question_text" = "Do you want to sign up for this offer?";
+"candidacy_inscriptions_text" = "Enrolled:";
+
+// Company
+
+"company_welcome_message_text" = "To get started\nregister a company";
+"company_url_not_valid_text" = "Invalid url";
+"company_cif_valid_format_text" = "The CIF must be a valid format";
+"company_register_success_1_text" = "Registered Company";
+"company_register_success_2_text" = "The company has been registered successfully";
+"company_register_failure_title_text" = "Register error";
+"company_register_failure_message_text" = "The company has not been registered successfully";
+"company_incomplete_fields_text" = "Incomplete fields";
+"company_mandatory_fields_text" = "Fill in the required fields";
+"company_name_label_text" = "Company name";
+"company_cif_label_text" = "CIF";
+"company_company_tab_text" = "Company";
+"company_sector_label_text" = "Sector";
+"company_web_label_text" = "Web";
+"company_create_button" = "Create company";
+"company_view_company_title_text" = "My Company";
+"company_view_company_subtitle_text" = "Company info";
+"company_logout_text_text" = "Logout";
+"company_my_company_label_text_text" = "My Company";
+"company_loading_company_text" = "Loading Company...";
+"company_companyreg1_text" = "To get started";
+"company_companyreg2_text" = "register a company";
+"company_areyousure_text" = "Are you sure you want to log out?";
+"company_logo_content_description_text" = "Company logo";
+"company_view_company_load_error_text" = "Failed to retrieve company information";
+"company_register_error_name_or_cif_exists_text" = "A company already exists with that name or CIF";
+"company_update_logo_text" = "Update Logo";
+"company_update_logo_success_text" = "The image has been uploaded successfully";
+"company_upload_logo_text" = "Upload Logo";
+"company_logo_upload_error_text" = "Upload error";
+
+// Components Sample
+
+"offer_enter_title_text" = "Enter tittle";
+"offer_description_offer_text" = "Offer description";
+"offer_example_vacancy_text" = "Ex: 3";
+"offer_enter_address_text" = "Enter address";
+"offer_example_cp_text" = "Ex: 41500";
+"offer_complete_name_text" = "Complete name";
+"offer_example_email_text" = "example@gmail.com";
+"offer_offer_detaill_text" = "OFFER DATA";
+"offer_title_text" = "Title";
+"offer_description_text" = "Description:";
+"offer_vacances_text" = "Vacancies";
+"offer_start_date_text" = "Start Date";
+"offer_end_date_text" = "End Date";
+"offer_offer_type_text" = "Offer type";
+"offer_select_text" = "Select";
+"offer_formation_text" = "Formation";
+"offer_contact_detaill_text" = "CONTACT DETAILL";
+"offer_addrees_text" = "Address";
+"offer_postal_code_text" = "Postal code";
+"offer_contact_name_text" = "Contact name";
+"offer_contact_email_text" = "Contact email";
+"offer_phone_text" = "Phone";
+"offer_optional_text" = "Optional";
+"offer_mandatory_title_text" = "Title is required";
+"offer_mandatory_description_text" = "Description is required";
+"offer_mandatory_vacancy_text" = "Vacancies are required";
+"offer_mandatory_cp_text" = "Postal code is required";
+"offer_mandatory_name_text" = "Name is required";
+"offer_mandatory_address_text" = "Address is required";
+"offer_phone_format_text" = "The phone number must be 9 digits";
+"offer_mandatory_fields_text" = "Required fields";
+"offer_fields_selected_text" = "Please check the marked fields";
+"offer_required_type_text" = "Type is required";
+"offer_select_type_offer_text" = "Please select whether the offer is on-site or online";
+"offer_required_degree_text" = "Degree is required";
+"offer_select_degree_text" = "Please select a degree";
+"offer_required_dates_text" = "Dates are required";
+"offer_offer_tab_text" = "Offers";
+"offer_max_length_vacances_text" = "You have exceeded the maximum allowed";
+"offer_select_dates_text" = "You must select a start and end date";
+"offer_invalid_postal_code_text" = "The postal code must be a five-digit number.";
+"offer_invalid_date_text" = "Invalid dates";
+"offer_error_dates_text" = "The start date cannot be after the end date";
+"offer_my_candidacy_text" = "My candidacy";
+"offer_success_text" = "Success";
+"offer_succefully_offer_text" = "Offer created successfully";
+"offer_detail_screen_title_text" = "Detail";
+"offer_create_offer_text" = "Create offer";
+"offer_type_regular_text" = "Standard program";
+"offer_type_adults_text" = "Adult education program";
+"offer_type_unknown_text" = "Unknown type";
+"offer_detail_load_error_text" = "Failed to load the offer. Please try again.";
+
+// Components Sample
+
+"error_no_internet_text" = "No internet conection";
+"error_session_expired_text" = "Sesion expired";
+"error_if_exist_name_text" = "There is already a company with that name";
+"error_if_invalid_date_text" = "Invalid dates";
+"error_if_exist_cif_text" = "";
+"error_unknow_error_text" = "Unknow server error";
+
+// Components Sample
+
+"offer_list_open_text" = "Opened";
+"offer_list_close_text" = "Closed";
+"offer_list_no_offers_text" = "No offers available.";
+"offer_list_my_offers_text" = "My offers";
+"offer_list_active_text" = "Active";
+"offer_list_offer_list_nav_text" = "Offer list";
+"offer_list_date_offer_text" = "Date: ";
+"offer_list_closed_text" = "Closed";
+"offer_list_formation_text" = "Formation: ";
+"offer_list_vacancies_text" = "Vacancy: ";
+"offer_list_modality_text" = "Mode: ";
+"offer_list_watchers_text" = "visualizations: ";
+"offer_list_inscribe_text" = "Already registered";
+"offer_list_company_text" = "Company:";
+"offer_list_address_text" = "Address:";
+"offer_list_postal_code_text" = "Postal code:";
+"offer_list_contact_text" = "Contact:";
+"offer_list_mail_text" = "Email:";
+"offer_list_phone_text" = "Phone:";
+"offer_list_not_offer_text" = "the offer could not be loaded";
+"offer_list_register_text" = "Register";
+"offer_list_icon_description_text" = "Company logo";
+"offer_list_icon_inscribe_text" = "Inscribe logo";
+"offer_list_next_text" = "Next";
+"offer_list_previous_text" = "Previous";
+
+// Components Sample
+
+"components_sample_title_text" = "Components";
+"components_sample_menu_buttons_button" = "Buttons";
+"components_sample_menu_textfields_button" = "TextFields";
+"components_sample_menu_dialogs_button" = "Dialogs";
+"components_sample_menu_pickers_button" = "Pickers";
+"components_sample_menu_sign_up_example_button" = "Sign up example";
+"components_sample_buttons_primary_text" = "Primary";
+"components_sample_buttons_secondary_text" = "Secundario";
+"components_sample_buttons_tertiary_text" = "Tertiary";
+"components_sample_buttons_outlined_text" = "Secondary button";
+"components_sample_buttons_enabled_button" = "Button";
+"components_sample_buttons_disabled_button" = "Disabled";
+"components_sample_buttons_icon_button" = "Icon";
+"components_sample_textfields_default_label" = "Default textField";
+"components_sample_textfields_error_label" = "Error textField";
+"components_sample_textfields_number_label" = "Number TextField";
+"components_sample_textfields_number_placeholder" = "e.g. 1234";
+"components_sample_textfields_disabled_label" = "Disabled textField";
+"components_sample_textfields_trailing_icon_label" = "Trailing icon textField";
+"components_sample_textfields_password_label" = "Password textField";
+"components_sample_textfields_suggestions_label" = "TextField with suggestions";
+"components_sample_dialogs_info_dialog_title_text" = "Info dialog";
+"components_sample_dialogs_info_dialog_message_text" = "Info dialog message";
+"components_sample_dialogs_error_dialog_title_text" = "Error dialog";
+"components_sample_dialogs_error_dialog_message_text" = "Error dialog message";
+"components_sample_dialogs_warning_dialog_title_text" = "Warning dialog";
+"components_sample_dialogs_warning_dialog_message_text" = "Warning dialog message";
+"components_sample_dialogs_input_text_dialog_title_text" = "Input dialog";
+"components_sample_dialogs_input_text_dialog_message_text" = "Input text dialog message";
+"components_sample_dialogs_input_text_dialog_placeholder" = "Write here";
+"components_sample_dialogs_input_text_dialog_snackbar" = "Text is: {text}";
+"components_sample_picker_title_text" = "Pickers";
+"components_sample_picker_header_text" = "Dates";
+"components_sample_picker_birth_date_text" = "Birthdate";
+"components_sample_picker_day_text" = "Day";
+"components_sample_picker_time_text" = "Time";
+"components_sample_picker_hidden_with_check_text" = "Studies completed";
+"components_sample_picker_gender_text" = "Gender";
+"components_sample_picker_gender_options_header_text" = "Select your gender";
+"components_sample_picker_list_with_search_text" = "Picker with search";
+"components_sample_picker_placeholder_text" = "Select";
+"components_sample_picker_list_text" = "Select the most beautiful city";
+"components_sample_picker_multiple_choice_text" = "Multiple choice";
+"components_sample_picker_single_choice_text" = "Single choice";
+"components_sample_picker_inline_text" = "Picker Inline";
+"components_sample_picker_segmented_text" = "Segmented";
+"components_sample_picker_wheel_text" = "Wheel";

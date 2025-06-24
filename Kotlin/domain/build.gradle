@@ -1,0 +1,56 @@
+plugins {
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.kover)
+}
+
+android {
+    namespace 'com.mobivery.fct25.domain'
+
+    defaultConfig {
+        compileSdk libs.versions.compileSdk.get() as Integer
+        minSdk libs.versions.minSdk.get() as Integer
+        targetSdk libs.versions.targetSdk.get() as Integer
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.toVersion(libs.versions.jvm.get())
+        targetCompatibility JavaVersion.toVersion(libs.versions.jvm.get())
+    }
+    kotlinOptions {
+        jvmTarget = libs.versions.jvm.get()
+    }
+    buildFeatures {
+        buildConfig = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+        }
+    }
+
+    flavorDimensions = ["product", "environment"]
+    productFlavors {
+        apply from: '../app/build_variants.gradle', to: ext
+        ext.flavors.each { name, config ->
+            "$name" {
+                dimension config.dimension
+            }
+        }
+    }
+}
+
+dependencies {
+
+    implementation libs.kotlin.stdlib
+    implementation libs.androidx.ktx.core
+
+    // Dagger/Hilt
+    implementation libs.bundles.hilt
+    ksp libs.hilt.compiler
+}

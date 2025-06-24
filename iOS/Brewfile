@@ -1,0 +1,6 @@
+tap "homebrew/bundle"
+
+brew "swiftlint"
+brew "xcodes"
+brew "swiftformat"
+brew "sourcery"

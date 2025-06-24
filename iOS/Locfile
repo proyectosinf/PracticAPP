@@ -1,0 +1,12 @@
+platform :swift, :file_name => 'InfoPlist.strings', :create_constants => false
+
+output_path 'App/SupportingFiles/InfoPlist'
+
+source :url => 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSvUOAYuV9qW3B-mffOs_xdcmQOrV1TF8iJkAVboazckxp6KiFxA6164BR79HXT-GDLzAy-3H9ub5p-/pub?output=xlsx',
+       :path => 'Localizables.xlsx',
+       :sheet => 1
+
+formatting :none
+
+# If the app has [i] tags or something like that, uncomment this
+except :keys => '[\[][a][\]]'

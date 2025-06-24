@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "720454680643",
+    "project_id": "practicasfct2025-practicapp",
+    "storage_bucket": "practicasfct2025-practicapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:720454680643:android:500090ea05100c0ee914f6",
+        "android_client_info": {
+          "package_name": "com.mobivery.fct25"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAb5zI6BeluFvjs269VCB4y2Qg6gMb30hQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:720454680643:android:d315f625ac52d8d7e914f6",
+        "android_client_info": {
+          "package_name": "com.mobivery.fct25.pre"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAb5zI6BeluFvjs269VCB4y2Qg6gMb30hQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

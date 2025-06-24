@@ -1,0 +1,77 @@
+{
+  "configurations" : [
+    {
+      "id" : "DFFC5B54-05BA-4E9A-B1EA-BCD2CAC789A6",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    },
+    {
+      "enabled" : false,
+      "id" : "A7704D83-54B7-4BA2-9B4A-CD984B100D9A",
+      "name" : "Configuration 2",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Modules",
+      "identifier" : "PracticAppModules",
+      "name" : "PracticAppModules"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Modules",
+        "identifier" : "AppCommonTests",
+        "name" : "AppCommonTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Modules",
+        "identifier" : "DomainTests",
+        "name" : "DomainTests"
+      }
+    },
+    {
+      "skippedTests" : {
+        "suites" : [
+          {
+            "name" : "RegisterScreenViewTests",
+            "testFunctions" : [
+              "testRegisterFailsWhenWorkTutorHasNoCompanyId()"
+            ]
+          }
+        ]
+      },
+      "target" : {
+        "containerPath" : "container:Modules",
+        "identifier" : "FeatureLoginTests",
+        "name" : "FeatureLoginTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Modules",
+        "identifier" : "FoundationUtilsTests",
+        "name" : "FoundationUtilsTests"
+      }
+    },
+    {
+      "skippedTests" : [
+        "SampleAPITests\/testInterceptorRefreshToken()"
+      ],
+      "target" : {
+        "containerPath" : "container:Modules",
+        "identifier" : "DataTests",
+        "name" : "DataTests"
+      }
+    }
+  ],
+  "version" : 1
+}

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AllowedTypes</key>
+	<array>
+		<string>public.swift-source</string>
+	</array>
+	<key>Platforms</key>
+	<array>
+		<string>com.apple.platform.iphoneos</string>
+	</array>
+	<key>Description</key>
+	<string>Coordinator + NavigationStackView</string>
+	<key>SupportsSwiftPackage</key>
+	<true/>
+	<key>Kind</key>
+	<string>Xcode.IDEKit.TextSubstitutionFileTemplateKind</string>
+	<key>SortOrder</key>
+	<integer>2</integer>
+	<key>Image</key>
+	<dict>
+		<key>FileTypeIcon</key>
+		<string>swift</string>
+	</dict>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Default</key>
+			<string>Login</string>
+			<key>Identifier</key>
+			<string>name</string>
+			<key>Name</key>
+			<string>Name:</string>
+			<key>Description</key>
+			<string>Nombre del flujo de navegación p.e.: Login</string>
+			<key>Required</key>
+			<string>YES</string>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_name___Navigation</string>
+			<key>Identifier</key>
+			<string>navigationName</string>
+			<key>Name</key>
+			<string>Navigation Name:</string>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>static</string>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_name___Coordinator</string>
+			<key>Description</key>
+			<string>The coordinator name</string>
+			<key>Identifier</key>
+			<string>coordinatorName</string>
+			<key>Name</key>
+			<string>Coordinator Name:</string>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>static</string>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string></string>
+			<key>NotPersisted</key>
+        	<true/>
+			<key>Description</key>
+			<string>The coordinator environment path</string>
+			<key>Identifier</key>
+			<string>coordinatorEnvironmentName</string>
+			<key>Name</key>
+			<string>Environment path name:</string>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>.environment(\.___VARIABLE_coordinatorEnvironmentName___Coordinator, coordinator)</string>
+			<key>Description</key>
+			<string>The coordinator name</string>
+			<key>Identifier</key>
+			<string>coordinatorEnvironmentPreview</string>
+			<key>Name</key>
+			<string>Environment:</string>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>static</string>
+		</dict>
+	</array>
+</dict>
+</plist>

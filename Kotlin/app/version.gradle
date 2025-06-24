@@ -1,0 +1,61 @@
+def getVersionPropsFile() {
+    def versionPropsFile = file('version.properties')
+
+    if (versionPropsFile.canRead()) {
+        return versionPropsFile
+    } else {
+        throw new GradleException("Could not read version.properties!")
+    }
+}
+
+def getVersionProps() {
+    def versionPropsFile = getVersionPropsFile()
+    Properties versionProps = new Properties()
+    versionProps.load(new FileInputStream(versionPropsFile))
+    return versionProps
+}
+
+ext.getVersionCode = { flavor ->
+    def versionProps = getVersionProps()
+    return versionProps[flavor].toInteger()
+}
+
+ext.getVersionName = { flavor ->
+    def versionProps = getVersionProps()
+    return versionProps[flavor]
+}
+
+ext.versionCodes = [
+        'fct25': getVersionCode("FCT25_VERSION_CODE"),
+]
+
+ext.versionNames = [
+        'fct25': getVersionName("FCT25_VERSION_NAME"),
+]
+
+task incrementVersionCode {
+    doFirst {
+        def versionProps = getVersionProps()
+        def code = versionProps[versionCode].toInteger() + 1
+        versionProps[versionCode] = code.toString()
+        def versionPropsFile = getVersionPropsFile()
+        versionProps.store(versionPropsFile.newWriter(), null)
+        return code
+    }
+}
+
+task setVersionName {
+    doFirst {
+        def versionProps = getVersionProps()
+        def versionPropsFile = getVersionPropsFile()
+        versionProps[versionNameKey] = versionNameValue
+        versionProps.store(versionPropsFile.newWriter(), null)
+    }
+}
+
+task getVersionProperty {
+    doFirst {
+        def versionProps = getVersionProps()
+        println versionProps[versionProp]
+    }
+}

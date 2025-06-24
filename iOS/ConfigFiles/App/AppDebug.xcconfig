@@ -1,0 +1,13 @@
+#include "App.xcconfig"
+
+ASSETCATALOG_COMPILER_APPICON_NAME = AppIconPre
+
+// Packaging
+PRODUCT_BUNDLE_IDENTIFIER = com.mobivery.fct25.pre
+
+// Signing
+CODE_SIGN_IDENTITY = Apple Development
+PROVISIONING_PROFILE_SPECIFIER = match Development ${PRODUCT_BUNDLE_IDENTIFIER}
+
+// Swift Compiler - Custom Flags
+SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG

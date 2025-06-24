@@ -1,0 +1,344 @@
+/*
+Localizable.strings
+
+GENERATED - DO NOT MODIFY - use the localio gem instead.
+
+Created by localio.
+*/
+
+
+
+// Common
+
+"common_app_name_text" = "Practicapp";
+"common_app_name_pre_text" = "Practicapp.pre";
+"common_language_code" = "es";
+"common_cancel_text" = "Cancelar";
+"common_close_text" = "Cerrar";
+"common_accept_text" = "Aceptar";
+"common_done_text" = "Hecho";
+"common_back_text" = "Atrás";
+"common_continue_text" = "Continuar";
+"common_save_text" = "Guardar";
+"common_edit_text" = "Editar";
+"common_yes_text" = "Sí";
+"common_no_text" = "No";
+"common_error_text" = "Error";
+"common_default_server_error_text" = "Se ha producido un error. Por favor, inténtalo de nuevo.";
+"common_forgot_password_success_title_text" = "Correo enviado";
+"common_forgot_password_success_message_text" = "Hemos enviado un correo a %@ con instrucciones para restablecer tu contraseña. Si no lo recibes en unos minutos, revisa tu carpeta de spam.";
+"common_loading_text" = "Cargando...";
+"common_mandatory_text" = "Requerido";
+"common_show_password_a11y" = "Mostrar contraseña";
+"common_hide_password_a11y" = "Ocultar contraseña";
+"common_force_to_update_text" = "Hay una nueva versión disponible. Actualiza para tener la mejor experiencia posible.";
+"common_optional_update_text" = "Hay una nueva versión disponible. Te recomendamos actualizar para tener la mejor experiencia posible.";
+"common_update_app_text" = "Actualizar app";
+"common_update_button" = "Actualizar";
+"common_open_app_settings_text" = "Ajustes";
+"common_mandatory_placeholder_text" = "(Requerido)";
+"common_menu_job_offers_label_text" = "Ofertas";
+"common_menu_company_label_text" = "Empresa";
+"common_menu_candidacies_label_text" = "Mis candidaturas";
+"common_unauthorized_error_text" = "Tu sesión ha caducado. Por favor, inicia sesión de nuevo.";
+
+// Login
+
+"login_title_text" = "Login";
+"login_email_text" = "Email";
+"login_password_text" = "Contraseña";
+"login_send_button" = "Login";
+"login_welcome_title_text" = "PracticApp";
+"login_welcome_body_text" = "Tu App de prácticas";
+"login_forgot_password_button" = "¿Contraseña olvidada?";
+"login_sign_up_text" = "¿Aún no tienes una cuenta?";
+"login_sign_up_button" = "Sign up";
+"login_error_credentials_text" = "Email o contraseña incorrectos";
+"login_forgot_password_title_text" = "¿Has olvidado tu contraseña?";
+"login_password_subtitle_text" = "Introduce tu correo electrónico y te enviaremos un enlace para restablecerla.";
+"login_password_send_text" = "Enviar enlace";
+"login_password_nav_title_text" = "Recuperar contraseña ";
+"login_try_later_text" = "No se pudo iniciar sesión. Inténtalo más tarde.";
+
+// Logout
+
+"logout_confirmation_title_text" = "Cerrar sesión";
+"logout_confirmation_message_text" = "¿Seguro que quiere cerrar sesión?";
+"logout_confirm_button" = "Cerrar sesión";
+"logout_cancel_button" = "Cancelar";
+
+// Register
+
+"register_title_text" = "Registro";
+"register_email_label_text" = "Email";
+"register_password_label_text" = "Contraseña";
+"register_confirm_password_label_text" = "Repetir contraseña";
+"register_name_label_text" = "Nombre";
+"register_lastname_label_text" = "Apellidos";
+"register_role_label_text" = "Rol";
+"register_role_student_text" = "Estudiante";
+"register_role_tutor_text" = "Tutor Laboral";
+"register_security_code_label_text" = "Código de seguridad";
+"register_dni_label_text" = "DNI";
+"register_social_security_label_text" = "Número de Seguridad Social";
+"register_upload_pdf_button_button" = "Subir PDF";
+"register_contact_name_label_text" = "Nombre de contacto";
+"register_contact_phone_label_text" = "Teléfono de contacto";
+"register_send_button_button" = "Registrarse";
+"register_invalid_email_text" = "Email inválido";
+"register_invalid_password_text" = "La contraseña debe tener al menos 8 caracteres, mayúsculas, minúsculas y caracteres especiales";
+"register_passwords_not_match_text" = "Las contraseñas no coinciden";
+"register_invalid_dni_text" = "DNI inválido";
+"register_invalid_social_security_text" = "Número de Seguridad Social inválido";
+"register_security_code_required_text" = "El código de seguridad es obligatorio";
+"register_name_required_text" = "El nombre es obligatorio";
+"register_lastname_required_text" = "El apellido es obligatorio";
+"register_contact_email_label_text" = "Email de contacto";
+"register_role_required_text" = "El rol es obligatorio";
+"register_statement_text" = "¡Bienvenido a PracticApp!";
+"register_sub_statement_text" = "Regístrate para comenzar a buscar prácticas";
+"register_error_email_exists_text" = "El correo electrónico ya está registrado";
+"register_max_length_name_surname_text" = "Máximo 100 caracteres permitidos.";
+"register_invalid_phone_text" = "El número de teléfono tiene que tener 9 caracteres";
+"register_register_success_1_text" = "Registro exitoso";
+"register_register_success_2_text" = "Te has registrado correctamente.";
+"register_validation_error_text" = "Error de validación";
+"register_fields_completed_text" = "Completa correctamente todos los campos.";
+"register_register_try_again_text" = "No se pudo completar el registro. Inténtalo de nuevo.";
+"register_error_firebase_user_null_text" = "No se pudo obtener el usuario de Firebase";
+"register_error_firebase_token_text" = "No se pudo obtener el token de Firebase";
+"register_error_by_role_null_text" = "Rol desconocido";
+"register_error_dni_already_exists_text" = "Ya existe un estudiante con ese DNI";
+"register_error_role_null_text" = "Debes seleccionar un rol";
+
+// Home
+
+"home_title_text" = "Home";
+"home_attach_photo_button" = "Adjuntar foto";
+"home_attach_photo_dialog_button" = "Adjuntar foto (con diálogo de permisos)";
+"home_camera_rationale" = "Es necesario el permiso de cámara para tomar fotos.";
+"home_camera_rejected_permission" = "Debes dar permiso de cámara a la app para poder adjuntar fotos.";
+"home_logout_button" = "Logout";
+
+// About
+
+"about_title_text" = "About";
+"about_button" = "Iniciar recurso que necesita múltiples permisos";
+"about_multiple_permissions_rationale" = "Son necesarios los permisos de cámara y micrófono para X.";
+"about_multiple_permissions_rejected" = "Debes dar permisos de cámara y micrófono a la app para X.";
+
+// Company
+
+"candidacy_loading_text" = "Cargando candidaturas...";
+"candidacy_not_candidacy_text" = "No hay candidaturas";
+"candidacy_not_candidacy_info_text" = "Esta oferta no tiene ninguna candidatura registrada.";
+"candidacy_postulation_text" = "Fecha de inscripción:";
+"candidacy_status_text" = "Estado:";
+"candidacy_title_text" = "Candidaturas";
+"candidacy_my_tittle_text" = "Mis candidaturas";
+"candidacy_status_pending_text" = "Pendiente";
+"candidacy_status_accepted_text" = "Aceptada";
+"candidacy_status_rejected_text" = "Rechazada";
+"candidacy_list_previous_button" = "Anterior";
+"candidacy_presentation_card_text" = "Carta de presentación:";
+"candidacy_register_text" = "¡Inscríbete!";
+"candidacy_success_text" = "Éxito";
+"candidacy_singup_success_text" = "Inscripción completada con éxito.";
+"candidacy_register_error_text" = "No se ha podido realizar la inscripción";
+"candidacy_type_presentation_card_text" = "Escribe aquí...";
+"candidacy_list_next_button" = "Siguiente";
+"candidacy_title_detail_text" = "Detalle de candidatura";
+"candidacy_additional_note_hint_text" = "Nota adicional (opcional)";
+"candidacy_additional_note_text" = "Nota adicional";
+"candidacy_accept_button" = "Aceptar";
+"candidacy_reject_button" = "Rechazar";
+"candidacy_dialog_accept_title_text" = "¿Aceptar candidatura?";
+"candidacy_dialog_reject_title_text" = "¿Rechazar candidatura?";
+"candidacy_dialog_accept_confirm_button" = "Aceptar";
+"candidacy_dialog_reject_confirm_button" = "Rechazar";
+"candidacy_dialog_confirm_button" = "Confirmar inscripción";
+"candidacy_dialog_cancel_button" = "Cancelar";
+"candidacy_company_comment_text" = "Comentario de la empresa";
+"candidacy_update_candidacy_text" = "Candidatura actualizada";
+"candidacy_reject_candidacy_alert_text" = "Haz rechazado al alumno correctamente";
+"candidacy_acept_candidacy_alert_text" = "Has aceptado al alumno correctamente";
+"candidacy_confirm_register_text" = "Confirmar";
+"candidacy_question_text" = "Quieres";
+"candidacy_question_to_text" = "a";
+"candidacy_register_question_text" = "¿Quieres inscribirte en esta oferta?";
+"candidacy_inscriptions_text" = "Inscritos:";
+
+// Company
+
+"company_welcome_message_text" = "Para comenzar\nregistra una empresa";
+"company_url_not_valid_text" = "Url no válida";
+"company_cif_valid_format_text" = "El CIF debe tener un formato válido";
+"company_register_success_1_text" = "Empresa Registrada";
+"company_register_success_2_text" = "La empresa se ha registrado correctamente";
+"company_register_failure_title_text" = "Error en el registro";
+"company_register_failure_message_text" = "La empresa no se ha registrado correctamente";
+"company_incomplete_fields_text" = "Campos incompletos";
+"company_mandatory_fields_text" = "Rellena los campos obligatorios";
+"company_name_label_text" = "Nombre de la empresa";
+"company_cif_label_text" = "CIF";
+"company_company_tab_text" = "Empresa";
+"company_sector_label_text" = "Sector";
+"company_web_label_text" = "Web";
+"company_create_button" = "Crear empresa";
+"company_view_company_title_text" = "Mi Empresa";
+"company_view_company_subtitle_text" = "Información de la empresa";
+"company_logout_text_text" = "Cerrar Sesión";
+"company_my_company_label_text_text" = "Mi Empresa";
+"company_loading_company_text" = "Cargando empresa...";
+"company_companyreg1_text" = "Para comenzar";
+"company_companyreg2_text" = "registra un empresa.";
+"company_areyousure_text" = "¿Estás seguro de que quieres cerrar sesión?";
+"company_logo_content_description_text" = "Logo de la empresa";
+"company_view_company_load_error_text" = "Formation: ";
+"company_register_error_name_or_cif_exists_text" = "Ya existe una empresa con ese nombre o CIF";
+"company_update_logo_text" = "Logo actualizado";
+"company_update_logo_success_text" = "La imagen se ha subido correctamente.";
+"company_upload_logo_text" = "Subir imagen";
+"company_logo_upload_error_text" = "Error al subir la imagen";
+
+// Components Sample
+
+"offer_enter_title_text" = "Introduce un título";
+"offer_description_offer_text" = "Describe la oferta";
+"offer_example_vacancy_text" = "Ej: 3";
+"offer_enter_address_text" = "Introduce dirección";
+"offer_example_cp_text" = "Ej: 41500";
+"offer_complete_name_text" = "Nombre completo";
+"offer_example_email_text" = "ejemplo@empresa.com";
+"offer_offer_detaill_text" = "DATOS DE LA OFERTA";
+"offer_title_text" = "Título";
+"offer_description_text" = "Descripción:";
+"offer_vacances_text" = "Vacantes";
+"offer_start_date_text" = "Fecha Inicio";
+"offer_end_date_text" = "Fecha Fin";
+"offer_offer_type_text" = "Tipo de oferta";
+"offer_select_text" = "Selecciona";
+"offer_formation_text" = "Formación: ";
+"offer_contact_detaill_text" = "DATOS DE CONTACTO";
+"offer_addrees_text" = "Dirección";
+"offer_postal_code_text" = "Código postal";
+"offer_contact_name_text" = "Nombre de contacto";
+"offer_contact_email_text" = "Email de contacto";
+"offer_phone_text" = "Teléfono";
+"offer_optional_text" = "Opcional";
+"offer_mandatory_title_text" = "Título obligatorio";
+"offer_mandatory_description_text" = "Descripción obligatoria";
+"offer_mandatory_vacancy_text" = "Vacantes obligatorias";
+"offer_mandatory_cp_text" = "Código postal obligatorio";
+"offer_mandatory_name_text" = "Nombre obligatorio";
+"offer_mandatory_address_text" = "Dirección obligatoria";
+"offer_phone_format_text" = "El número de teléfono ha de tener 9 digitos";
+"offer_mandatory_fields_text" = "Campos obligatorios";
+"offer_fields_selected_text" = "Por favor, revisa los campos marcados";
+"offer_required_type_text" = "Tipo requerido";
+"offer_select_type_offer_text" = "Selecciona si la oferta es presencial u online";
+"offer_required_degree_text" = "Grado requerido";
+"offer_select_degree_text" = "Selecciona un grado de formación";
+"offer_required_dates_text" = "Fechas requeridas";
+"offer_offer_tab_text" = "Ofertas";
+"offer_max_length_vacances_text" = "Ha superado el máximo permitido";
+"offer_select_dates_text" = "Debes seleccionar fechas de inicio a fin";
+"offer_invalid_postal_code_text" = "El código postal debe ser un número con cinco dígitos";
+"offer_invalid_date_text" = "Fechas inválidas";
+"offer_error_dates_text" = "La fecha de inicio no puede ser posterior a la de fin";
+"offer_my_candidacy_text" = "Mis candidaturas";
+"offer_success_text" = "Éxito";
+"offer_succefully_offer_text" = "Oferta creada correctamente";
+"offer_detail_screen_title_text" = "Detalle";
+"offer_create_offer_text" = "Crear oferta";
+"offer_type_regular_text" = "Régimen ordinario";
+"offer_type_adults_text" = "Régimen personas adultas";
+"offer_type_unknown_text" = "Régimen desconocido";
+"offer_detail_load_error_text" = "No se pudo cargar la oferta. Inténtalo de nuevo.";
+
+// Components Sample
+
+"error_no_internet_text" = "No hay conexion a internet";
+"error_session_expired_text" = "Tu sesión ha expirado";
+"error_if_exist_name_text" = "Ya exite una empresa con ese nombre";
+"error_if_invalid_date_text" = "Los datos no son validos";
+"error_if_exist_cif_text" = "El CIF ya está registrado";
+"error_unknow_error_text" = "Error desconocido del servidor";
+
+// Components Sample
+
+"offer_list_open_text" = "Abiertas";
+"offer_list_close_text" = "Cerradas";
+"offer_list_no_offers_text" = "No hay ofertas disponibles.";
+"offer_list_my_offers_text" = "Mis ofertas";
+"offer_list_active_text" = "Activa";
+"offer_list_offer_list_nav_text" = "Lista de ofertas";
+"offer_list_date_offer_text" = "Fecha: ";
+"offer_list_closed_text" = "Cerrada";
+"offer_list_formation_text" = "Formación: ";
+"offer_list_vacancies_text" = "Vacantes: ";
+"offer_list_modality_text" = "Modalidad: ";
+"offer_list_watchers_text" = "Visualizaciones: ";
+"offer_list_inscribe_text" = "Ya inscrito";
+"offer_list_company_text" = "Empresa:";
+"offer_list_address_text" = "Dirección:";
+"offer_list_postal_code_text" = "Código postal:";
+"offer_list_contact_text" = "Contacto:";
+"offer_list_mail_text" = "Email:";
+"offer_list_phone_text" = "Telefono:";
+"offer_list_not_offer_text" = "No se pudo cargar la oferta";
+"offer_list_register_text" = "Inscribirse";
+"offer_list_icon_description_text" = "Logo de la empresa";
+"offer_list_icon_inscribe_text" = "Icono de Inscripción";
+"offer_list_next_text" = "Siguiente";
+"offer_list_previous_text" = "Anterior";
+
+// Components Sample
+
+"components_sample_title_text" = "Componentes";
+"components_sample_menu_buttons_button" = "Botones";
+"components_sample_menu_textfields_button" = "TextFields";
+"components_sample_menu_dialogs_button" = "Dialogos";
+"components_sample_menu_pickers_button" = "Selectores";
+"components_sample_menu_sign_up_example_button" = "Ejemplo de registro";
+"components_sample_buttons_primary_text" = "Primario";
+"components_sample_buttons_secondary_text" = "Secundario";
+"components_sample_buttons_tertiary_text" = "Terciario";
+"components_sample_buttons_outlined_text" = "Botón secundario";
+"components_sample_buttons_enabled_button" = "Botón";
+"components_sample_buttons_disabled_button" = "Deshabilitado";
+"components_sample_buttons_icon_button" = "Icono";
+"components_sample_textfields_default_label" = "TextField básico";
+"components_sample_textfields_error_label" = "TextField con error";
+"components_sample_textfields_number_label" = "TextField numérico";
+"components_sample_textfields_number_placeholder" = "ej. 1234";
+"components_sample_textfields_disabled_label" = "TextField deshabilitado";
+"components_sample_textfields_trailing_icon_label" = "TextField con icono";
+"components_sample_textfields_password_label" = "Contraseña";
+"components_sample_textfields_suggestions_label" = "TextField con sugerencias";
+"components_sample_dialogs_info_dialog_title_text" = "Informativo";
+"components_sample_dialogs_info_dialog_message_text" = "Mensaje del diálogo informativo";
+"components_sample_dialogs_error_dialog_title_text" = "Error";
+"components_sample_dialogs_error_dialog_message_text" = "Mensaje del diálogo de error";
+"components_sample_dialogs_warning_dialog_title_text" = "Advertencia";
+"components_sample_dialogs_warning_dialog_message_text" = "Mensaje del diálogo de advertencia";
+"components_sample_dialogs_input_text_dialog_title_text" = "Entrada de texto";
+"components_sample_dialogs_input_text_dialog_message_text" = "Mensaje del diálogo con entrada de texto";
+"components_sample_dialogs_input_text_dialog_placeholder" = "Escribe aquí";
+"components_sample_dialogs_input_text_dialog_snackbar" = "El texto es: {text}";
+"components_sample_picker_title_text" = "Selectores";
+"components_sample_picker_header_text" = "Fechas";
+"components_sample_picker_birth_date_text" = "Fecha de nacimiento";
+"components_sample_picker_day_text" = "Día";
+"components_sample_picker_time_text" = "Hora";
+"components_sample_picker_hidden_with_check_text" = "Estudios finalizados";
+"components_sample_picker_gender_text" = "Género";
+"components_sample_picker_gender_options_header_text" = "Selecciona tu género";
+"components_sample_picker_list_with_search_text" = "Selector con buscador";
+"components_sample_picker_placeholder_text" = "Selecciona";
+"components_sample_picker_list_text" = "Selecciona la ciudad más bonita";
+"components_sample_picker_multiple_choice_text" = "Multiselección";
+"components_sample_picker_single_choice_text" = "Selección única";
+"components_sample_picker_inline_text" = "Selector \"inline\"";
+"components_sample_picker_segmented_text" = "Segmented";
+"components_sample_picker_wheel_text" = "Rueda";

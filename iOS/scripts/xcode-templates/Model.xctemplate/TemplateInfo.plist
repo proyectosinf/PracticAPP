@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.IDEKit.TextSubstitutionFileTemplateKind</string>
+	<key>Description</key>
+	<string>A model struct for the diferent layers</string>
+	<key>Summary</key>
+	<string>Model struct</string>
+	<key>SortOrder</key>
+	<integer>3</integer>
+	<key>AllowedTypes</key>
+	<array>
+		<string>public.swift-source</string>
+	</array>
+	<key>SupportsSwiftPackage</key>
+    <true/>
+	<key>Image</key>
+	<dict>
+		<key>FileTypeIcon</key>
+		<string>swift</string>
+	</dict>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Identifier</key>
+			<string>modelName</string>
+			<key>Required</key>
+			<true/>
+			<key>Name</key>
+			<string>Model Name:</string>
+			<key>Description</key>
+			<string>The name of the file to create</string>			
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>modelType</string>
+			<key>Required</key>
+			<true/>
+			<key>Name</key>
+			<string>Model type:</string>
+			<key>Description</key>
+			<string>Scope of the model</string>
+			<key>Type</key>
+			<string>popup</string>
+			<key>Default</key>
+			<string>Domain</string>
+			<key>Values</key>
+			<array>
+				<string>Domain</string>
+				<string>API Response</string>
+				<string>API Params</string>
+				<string>Decodable</string>
+				<string>Encodable</string>
+				<string>Other</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

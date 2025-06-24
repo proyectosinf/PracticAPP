@@ -1,0 +1,44 @@
+# Rakefile
+# Copyright (C) 2024 Mobivery
+
+STDOUT.sync = true
+
+require 'rake'
+require 'localio'
+
+desc 'Run with $ bundle exec rake templates'
+desc 'Install xcode templates'
+task :templates do
+    system("./scripts/xcode-templates/update-templates.sh")
+end
+
+desc 'Run with $ bundle exec rake format'
+desc 'Format files with swiftlint and swiftformat'
+task :format do
+    system("swiftformat .")
+    system("swiftlint --fix .")
+end
+
+desc 'Run with $ bundle exec rake sourcery'
+desc 'Generate mocks with sourcery'
+task :mocks do
+    system("sourcery")
+    system("swiftformat .")
+    system("swiftlint --fix .")
+end
+
+desc 'Run with $ bundle exec rake localize'
+desc 'Generate localizable strings'
+task :localize do
+    system("localize")
+    system("localize LocfileGeneral")
+    process_constants_file("general")
+end
+
+def process_constants_file(table)
+    new_file = "Modules/Sources/AppCommon/Localizables/Strings+#{table}.swift"
+    File.rename("Modules/Sources/AppCommon/Localizables/LocalizableConstants.swift", new_file)
+    file = File.read(new_file)
+    file_content = file.gsub("{{Table}}", table)
+    File.write(new_file, file_content)
+end

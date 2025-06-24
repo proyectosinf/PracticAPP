@@ -1,0 +1,23 @@
+*__pycache__
+.venv
+.idea
+.coverage
+
+# env
+project/.tests_env
+project/.env
+
+.pytest_cache
+
+# Credentials firebase
+project/app/keys/pre.json
+
+
+entrypoint.sh
+
+# scripts
+project/format_and_lint.sh
+project/format_and_lint.bat
+
+# database sql
+project/app/tests/practicapp.db

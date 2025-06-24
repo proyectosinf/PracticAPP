@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  db:
+    build:
+      context: ../fct25-backend/project/db
+      dockerfile: Dockerfile
+    ports:
+      - "5433:5432"
+    expose:
+      - 5432
+    env_file:
+      - ../fct25-backend/project/.env

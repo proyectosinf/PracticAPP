@@ -1,0 +1,122 @@
+#include "Project.xcconfig"
+
+// Architectures
+ONLY_ACTIVE_ARCH = YES
+
+// Assets
+
+// Build Locations
+
+// Build Options
+DEBUG_INFORMATION_FORMAT = dwarf
+ENABLE_TESTABILITY = YES
+
+// Deployment
+
+// Headers
+
+// Info.plist Values
+
+// Kernel Module
+
+// Linking - General
+
+// Linking - Mergeable Libraries
+
+// Localization
+
+// Packaging
+
+// Search Paths
+
+// Signing
+
+// Siri
+
+// Testing
+
+// Text-Based API
+
+// Versioning
+
+// Apple Clang - Address Sanitizer
+
+// Apple Clang - Code Generation
+GCC_DYNAMIC_NO_PIC = NO
+GCC_OPTIMIZATION_LEVEL = 0
+
+// Apple Clang - Custom Compiler Flags
+
+// Apple Clang - Language
+
+// Apple Clang - Language - C++
+
+// Apple Clang - Language - Modules
+
+// Apple Clang - Language - Objective-C
+
+// Apple Clang - Preprocessing
+
+// Enable Foundation Assertions
+ENABLE_NS_ASSERTIONS = YES
+
+// Preprocessor Macros
+GCC_PREPROCESSOR_DEFINITIONS = DEBUG=1 $(inherited)
+
+// Apple Clang - Undefined Behavior Sanitizer
+
+// Apple Clang - Warning Policies
+
+// Apple Clang - Warnings - All languages
+
+// Apple Clang - Warnings - C++
+
+// Apple Clang - Warnings - Objective-C
+
+// Apple Clang - Warnings - Objective-C and ARC
+
+// Apple Clang Module Verifier - Options
+
+// Asset Catalog Compiler - Options
+
+// Designed for iPhone & iPad - Deployment
+
+// Documentation Compiler - Options
+
+// Mac Catalyst - Deployment
+
+// OSACompile - Build Options
+
+// Static Analysis - Analysis Policy
+
+// Static Analysis - Generic Issues
+
+// Static Analysis - Issues - Apple APIs
+
+// Static Analysis - Issues - C++
+
+// Static Analysis - Issues - Objective-C
+
+// Static Analysis - Issues - Security
+
+// Static Analysis - Issues - Unused Code
+
+// Swift Compiler - Code Generation
+SWIFT_COMPILATION_MODE = singlefile
+SWIFT_OPTIMIZATION_LEVEL = -Onone
+
+// Swift Compiler - Custom Flags
+SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG $(inherited)
+
+// Active Compilation Conditions
+
+// Swift Compiler - General
+
+// Swift Compiler - Language
+
+// Swift Compiler - Search Paths
+
+// Swift Compiler - Warnings Policies
+
+// User-Defined
+MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE

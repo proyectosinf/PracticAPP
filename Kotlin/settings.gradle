@@ -1,0 +1,22 @@
+pluginManagement {
+    apply from: 'repos.gradle'
+    addRepos(repositories)
+}
+
+dependencyResolutionManagement {
+    apply from: 'repos.gradle'
+    addRepos(repositories)
+}
+
+include ':app', ':domain', ':data', ':app:common'
+rootProject.name='Fct25'
+include ':app:feature:login'
+include ':testing'
+include ':app:feature:home'
+include ':app:feature:about'
+include ':app:feature:components'
+include ':app:feature:register'
+include ':app:feature:register:test'
+include ':app:feature:worktutor'
+include ':app:feature:company'
+include ':app:feature:student'

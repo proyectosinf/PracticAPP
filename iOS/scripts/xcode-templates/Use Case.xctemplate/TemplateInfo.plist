@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.IDEKit.TextSubstitutionFileTemplateKind</string>
+	<key>Description</key>
+	<string>A sync or async use case protocol and implementation for de domain layer</string>
+	<key>Summary</key>
+	<string>A Domain Use Case</string>
+	<key>SortOrder</key>
+	<integer>6</integer>
+	<key>AllowedTypes</key>
+	<array>
+		<string>public.swift-source</string>
+	</array>
+	<key>SupportsSwiftPackage</key>
+    <true/>
+	<key>Image</key>
+	<dict>
+		<key>FileTypeIcon</key>
+		<string>swift</string>
+	</dict>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Default</key>
+			<string>Login</string>
+			<key>Identifier</key>
+			<string>useCaseName</string>
+			<key>Required</key>
+			<true/>
+			<key>Name</key>
+			<string>Name:</string>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_useCaseName___UseCase</string>
+			<key>Identifier</key>
+			<string>protocolName</string>
+			<key>Name</key>
+			<string>Protocol Name:</string>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>static</string>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_useCaseName___UseCaseImpl</string>
+			<key>Identifier</key>
+			<string>implementationName</string>
+			<key>Name</key>
+			<string>Implementation Name:</string>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>static</string>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>invocationType</string>
+			<key>Required</key>
+			<true/>
+			<key>Name</key>
+			<string>Invocation type:</string>
+			<key>Description</key>
+			<string>How is this use case invocated</string>
+			<key>Type</key>
+			<string>popup</string>
+			<key>Default</key>
+			<string>Async</string>
+			<key>Values</key>
+			<array>
+				<string>Async</string>
+				<string>Sync</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>
